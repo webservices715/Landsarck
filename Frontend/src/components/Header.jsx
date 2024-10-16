@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Login from './Login'; // Import Login component
-import Signup from './Signup'; // Import Signup component
+import Login from './Login'; 
+import Signup from './Signup'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isSignupOpen, setIsSignupOpen] = useState(false); // State to control signup popup
+  const [isSignupOpen, setIsSignupOpen] = useState(false); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

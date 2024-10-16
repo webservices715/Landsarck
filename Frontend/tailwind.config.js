@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
       "./index.html",
@@ -6,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+    "young-serif": "Young Serif",
+    "bitter": "Bitter"
+    }
   },
   plugins: [],
 }

@@ -31,11 +31,11 @@ const TerraceGardenPlan = () => {
   };
 
   return (
-    <div className="mx-auto p-6 lg:flex lg:space-x-8 lg:p-8">
+    <div className="mx-auto p-6 lg:flex lg:space-x-8 lg:px-16">
       {/* Left section (Text and Accordion) */}
-      <div className="lg:w-1/2 lg:px-10">
+      <div className="lg:w-1/2 lg:px-16">
         <h1
-          className="text-[40px] md:text-[60px] lg:text-[74px] text-center mb-4 md:mb-6 mt-4 md:mt-8 font-young-serif"
+          className="text-[40px] md:text-[60px] lg:text-[70px] text-center mb-4 md:mb-6 mt-4 md:mt-8 font-young-serif"
           style={{ lineHeight: 1.1 }}
         >
           Choose Terrace Garden Plan
@@ -98,7 +98,7 @@ const TerraceGardenPlan = () => {
         <img
           src={selectedImage}
           alt="Terrace Garden"
-          className="object-cover w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]"
+          className="object-cover w-full h-[350px] sm:h-[500px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]"
         />
       </div>
     </div>

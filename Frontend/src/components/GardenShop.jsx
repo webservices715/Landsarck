@@ -3,7 +3,7 @@ import '../App.css';
 
 const GardenShop = () => {
   return (
-    <div className="w-full lg:px-14 px-2 mx-auto py-12 lg:py-24">
+    <div className="w-full lg:px-14 px-2 mx-auto py-12 lg:pt-24">
       <div className="flex justify-center mb-6">
         <a
           href="#"
@@ -14,7 +14,7 @@ const GardenShop = () => {
       </div>
 
       {/* Services Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 gap-0 lg:text-left text-center">
         {/* Residential & Farm Landscape */}
         <div className="flex flex-col items-center  overflow-hidden">
           <div className="w-full h-[55%] overflow-hidden">
@@ -77,7 +77,7 @@ const GardenShop = () => {
             </p>
             <a
               href="#"
-              className="bg-zinc-900 font-bitter text-white text-lg px-36 lg:px-48 py-8 rounded-full hover:bg-zinc-700 transition-all"
+              className="bg-zinc-900 font-bitter text-white text-lg px-36 lg:px-48 py-6 rounded-full hover:bg-zinc-700 transition-all"
             >
               Book
             </a>

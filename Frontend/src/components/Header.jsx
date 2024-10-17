@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Login from './Login'; 
-import Signup from './Signup'; 
+import SignUp from './SignUp'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,7 +106,7 @@ const Header = () => {
       {isLoginOpen && <Login closeLogin={closeLogin} />}
 
       {/* Signup Modal */}
-      {isSignupOpen && <Signup closeSignup={closeSignup} />}
+      {isSignupOpen && <SignUp closeSignup={closeSignup} />}
     </header>
   );
 };

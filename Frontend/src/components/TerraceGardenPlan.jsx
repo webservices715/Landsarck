@@ -31,9 +31,9 @@ const TerraceGardenPlan = () => {
   };
 
   return (
-    <div className="mx-auto p-6 lg:flex lg:space-x-8 lg:px-16">
+    <div className="mx-auto p-6 lg:flex lg:space-x-8 lg:px-16 lg:py-12">
       {/* Left section (Text and Accordion) */}
-      <div className="lg:w-1/2 lg:px-16">
+      <div className="lg:w-1/2 lg:px-4">
         <h1
           className="text-[40px] md:text-[60px] lg:text-[70px] text-center mb-4 md:mb-6 mt-4 md:mt-8 font-young-serif"
           style={{ lineHeight: 1.1 }}

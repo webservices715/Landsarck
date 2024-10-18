@@ -3,7 +3,7 @@ import '../App.css';
 
 const GardenShop = () => {
   return (
-    <div className="w-full px-4 lg:px-28 mx-auto py-8 lg:py-20">
+    <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-8 lg:py-20">
       <div className="flex justify-center mb-8">
         <a
           href="#"

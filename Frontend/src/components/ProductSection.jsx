@@ -27,7 +27,7 @@ const ProductSection = () => {
   ];
 
   return (
-    <div className="container mx-auto py-20 px-6 sm:px-8 md:px-12">
+    <div className="w-full py-20 px-6 sm:px-8 md:px-16">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-[32px] sm:text-[40px] md:text-[50px] font-young-serif">Featured Products</h2>
         {/* Large screens pe dikhaye */}
@@ -46,7 +46,7 @@ const ProductSection = () => {
             <img
               src={product.imageUrl}
               alt={product.title}
-              className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
+              className="h-[300px] sm:h-[400px] md:h-[500px] object-cover"
             />
             <div className="py-4">
               <h3 className="text-[18px] sm:text-[22px] md:text-[26px] font-young-serif">{product.title}</h3>

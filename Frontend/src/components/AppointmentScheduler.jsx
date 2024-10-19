@@ -5,6 +5,7 @@ const AppointmentScheduler = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [selectedTimes, setSelectedTimes] = useState({});
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
+  const [timeSelected, setTimeSelected] = useState(false); // New state to track if a time is selected
 
   const serviceOptions = [
     { title: "Free Consultation", time: "30 minutes", price: "Free" },
@@ -14,8 +15,9 @@ const AppointmentScheduler = () => {
 
   const handlePlanSelect = (plan) => {
     setSelectedPlan(plan);
-    // Reset selected times when a new plan is selected
+    // Reset selected times and time selection flag when a new plan is selected
     setSelectedTimes({});
+    setTimeSelected(false);
   };
 
   const handleTimeSelect = (time, date) => {
@@ -23,6 +25,7 @@ const AppointmentScheduler = () => {
       ...prevTimes,
       [date]: time,
     }));
+    setTimeSelected(true); // Mark time as selected
   };
 
   const getNextDays = () => {
@@ -69,27 +72,28 @@ const AppointmentScheduler = () => {
         {/* Step 1: Choose a Plan */}
         <div className="space-y-6">
           {serviceOptions.map((option, index) => (
-            <ServiceOption
-              key={index}
-              title={option.title}
-              time={option.time}
-              price={option.price}
-              onSelect={() => handlePlanSelect(option.title)}
-              isSelected={selectedPlan === option.title}
-            />
+            // Render only selected plan or none if no plan is selected
+            (selectedPlan === null || selectedPlan === option.title) && (
+              <ServiceOption
+                key={index}
+                title={option.title}
+                time={option.time}
+                price={option.price}
+                onSelect={() => handlePlanSelect(option.title)}
+                isSelected={selectedPlan === option.title}
+              />
+            )
           ))}
         </div>
 
-        {/* Step 2: Choose a Time (only if a plan is selected) */}
-        {selectedPlan && (
+        {/* Step 2: Choose a Time (only if a plan is selected and time has not been selected) */}
+        {selectedPlan && !timeSelected && (
           <div className="mt-10">
             <h2 className="text-xl font-semibold">Select a Time</h2>
             <div className="flex justify-between items-center mt-4">
               <button
                 onClick={getPrevDays}
-                className={`flex items-center px-4 py-2 rounded-md ${
-                  currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '
-                }`}
+                className={`flex items-center px-4 py-2 rounded-md ${currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '}`}
                 disabled={currentDayIndex === 0}
               >
                 <FiChevronLeft className="mr-2" /> {/* Previous Icon */}
@@ -129,8 +133,19 @@ const AppointmentScheduler = () => {
           </div>
         )}
 
+        {/* Display selected plan and time information */}
+        {selectedPlan && timeSelected && (
+          <div className="mt-10">
+            <h2 className="text-xl font-semibold">Selected Appointment</h2>
+            <p><strong>Plan:</strong> {selectedPlan}</p>
+            <p><strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
+              <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
+            ))}</p>
+          </div>
+        )}
+
         {/* Step 3: Personal Information Form (only visible after both plan and time selection) */}
-        {selectedPlan && Object.values(selectedTimes).some(time => time) && (
+        {selectedPlan && timeSelected && (
           <div className="mt-10">
             <h2 className="text-xl font-semibold">Your Information</h2>
             <form className="mt-4 space-y-4">

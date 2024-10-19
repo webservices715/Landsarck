@@ -6,10 +6,10 @@ const MaintenancePlan = () => {
       <h1 className="text-[36px] lg:text-[56px] mb-12 font-young-serif text-center">
         Choose Your Maintenance Plan
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full">
 
         {/* Plan 1: Basic Plan */}
-        <div className="h-auto lg:h-[650px] border-2 border-black flex flex-col items-center justify-between p-8 bg-white shadow-md hover:shadow-2xl transition-shadow duration-300">
+        <div className="h-auto lg:h-[650px] flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500">
           <h2 className="text-3xl font-young-serif mb-4 text-gray-800">Basic Plan</h2>
           <p className="text-lg mb-8 text-gray-600 text-center">
             Ideal for smaller gardens or terraces.
@@ -30,7 +30,7 @@ const MaintenancePlan = () => {
         </div>
 
         {/* Plan 2: Standard Plan */}
-        <div className="h-auto lg:h-[650px] border-2 border-black flex flex-col items-center justify-between p-8 bg-white shadow-md hover:shadow-2xl transition-shadow duration-300">
+        <div className="h-auto lg:h-[650px] flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500">
           <h2 className="text-3xl font-young-serif mb-4 text-gray-800">Standard Plan</h2>
           <p className="text-lg mb-8 text-gray-600 text-center">
             Best suited for medium-sized gardens.
@@ -51,7 +51,7 @@ const MaintenancePlan = () => {
         </div>
 
         {/* Plan 3: Premium Plan */}
-        <div className="h-auto lg:h-[650px] border-2 border-black relative flex flex-col items-center justify-between p-8 bg-white shadow-md hover:shadow-2xl transition-shadow duration-300">
+        <div className="h-auto lg:h-[650px] relative flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500">
         <div className="absolute -top-16 lg:-top-16 -right-1 bg-black text-white px-6 py-10 rounded-full font-bitter text-lg">
             Popular
           </div>

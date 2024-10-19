@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-gray-50 py-12 px-2 lg:px-16 overflow-x-hidden">
       <div className="text-center mb-6">
-        <h2 className="text-5xl text-gray-900 font-young-serif py-5">Why Choose Us</h2>
+        <h2 className="text-4xl lg:text-5xl text-gray-900 font-young-serif py-5">Why Choose Us</h2>
       </div>
       <Slider {...settings}>
         {features.map((feature, index) => (

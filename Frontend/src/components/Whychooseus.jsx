@@ -4,11 +4,13 @@ import Slider from 'react-slick';
 const WhyChooseUs = () => {
   const settings = {
     infinite: true,
-    speed: 800,
+    speed: 4000, 
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -38,10 +40,11 @@ const WhyChooseUs = () => {
     { icon: 'https://cdn-icons-png.freepik.com/256/3063/3063822.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '35,000+ Homes Delivered' },
     { icon: 'https://cdn-icons-png.freepik.com/256/1825/1825777.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '44 Studios' },
     { icon: 'https://cdn-icons-png.freepik.com/256/1527/1527807.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '22 Cities' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/4427/4427612.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'No Hidden Costs' },
   ];
 
   return (
-    <section className="bg-gray-50 py-12">
+    <section className="bg-gray-50 py-12 px-2 lg:px-16 overflow-x-hidden">
       <div className="text-center mb-6">
         <h2 className="text-5xl text-gray-900 font-young-serif py-5">Why Choose Us</h2>
       </div>

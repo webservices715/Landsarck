@@ -44,7 +44,7 @@ const GardenShop = () => {
             <img
               src="https://images.squarespace-cdn.com/content/v1/6706b570121dfe1f37390221/1728728191103-MJI67XBSXXS78N9OW0I3/unsplash-image-F0_1bRibvjY.jpg"
               alt="Commercial Landscape"
-              className="w-full h-full object-cover rounded-[30%]"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="py-8">
@@ -67,7 +67,7 @@ const GardenShop = () => {
             <img
               src="https://images.squarespace-cdn.com/content/v1/5ec321c2af33de48734cc929/0a6642f9-02fc-4b7f-80f6-6b00a48cce62/image-asset.jpeg?format=1500w"
               alt="Renovations"
-              className="w-full h-full object-cover rounded-clip-2"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="py-8">

@@ -3,7 +3,7 @@ import '../App.css';
 
 const GardenShop = () => {
   return (
-    <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-8 lg:py-20">
+    <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-20">
       <div className="flex justify-center mb-8">
         <a
           href="#"
@@ -24,14 +24,14 @@ const GardenShop = () => {
               className="w-full h-full object-cover  rounded-[2.5rem]"
             />
           </div>
-          <div className="py-8 lg:py-6">
+          <div className="py-8">
             <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">RESIDENTIAL & FARM LANDSCAPE</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-20">
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-16">
               Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"
-              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base  lg:text-lg px-28 sm:px-12 lg:px-44 py-6 sm:py-4 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
+              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base  lg:text-lg px-28 sm:px-40 lg:px-44 py-6 sm:py-8 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
             >
               Book
             </a>
@@ -47,14 +47,14 @@ const GardenShop = () => {
               className="w-full h-full object-cover rounded-[30%]"
             />
           </div>
-          <div className="py-8 lg:py-6">
+          <div className="py-8">
             <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">COMMERCIAL LANDSCAPE</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-20">
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-24">
               Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"
-              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base  lg:text-lg px-28 sm:px-12 lg:px-44 py-6 sm:py-4 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
+              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base  lg:text-lg px-28 sm:px-40 lg:px-44 py-6 sm:py-8 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
             >
               Book
             </a>
@@ -70,14 +70,14 @@ const GardenShop = () => {
               className="w-full h-full object-cover rounded-clip-2"
             />
           </div>
-          <div className="py-8 lg:py-6">
+          <div className="py-8">
             <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">RENOVATIONS</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-6 lg:mb-20">
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-10 lg:mb-24">
               Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"
-              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base lg:text-lg px-28 sm:px-12 lg:px-44 py-6 sm:py-4 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
+              className="bg-zinc-900 font-bitter text-white text-sm sm:text-base lg:text-lg px-28 sm:px-40 lg:px-44 py-6 sm:py-8 lg:py-8 rounded-full hover:bg-zinc-700 transition-all"
             >
               Book
             </a>

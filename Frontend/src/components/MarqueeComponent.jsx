@@ -3,8 +3,8 @@ import { gsap } from "gsap";
 
 const MarqueeComponent = () => {
   useEffect(() => {
-    const dur = 20; 
-    const tl = gsap.timeline({ repeat: -1 }); // Continuous loop
+    const dur = 30; 
+    const tl = gsap.timeline({ repeat: -1}); // Continuous loop
 
     tl.to("#masterTextPath1", {
       duration: dur,
@@ -13,13 +13,13 @@ const MarqueeComponent = () => {
     })
     .to("#masterTextPath2", {
       duration: dur,
-      attr: { startOffset: "-100%" }, 
+      attr: { startOffset: "-200%" }, 
       ease: "none",
     }, `-=${dur / 2}`); 
   }, []);
 
   return (
-    <div className="flex items-center justify-center lg:py-40 py-24 bg-[#dcdcdc]">
+    <div className="flex items-center justify-center lg:py-28 py-24 bg-[#dcdcdc]">
       <svg
         version="1.1"
         id="Layer_1"
@@ -42,8 +42,8 @@ const MarqueeComponent = () => {
           <textPath
             id="masterTextPath1"
             xlinkHref="#master-line"
-            startOffset="100%"  
-            className="text-[10rem] tracking-[0.11em] font-young-serif"
+            startOffset="90%"  
+            className="text-[5rem] tracking-[0.1em] font-young-serif"
             style={{ lineHeight: "3.29vw" }}
           >
             Follow Us On Social Media
@@ -55,8 +55,8 @@ const MarqueeComponent = () => {
           <textPath
             id="masterTextPath2"
             xlinkHref="#master-line"
-            startOffset="200%"  
-            className="text-[8rem] tracking-[0.1em] font-young-serif"
+            startOffset="100%"  
+            className="text-[5rem] tracking-[0.1em] font-young-serif"
             style={{ lineHeight: "3.29vw" }}
           >
             Follow Us On Social Media

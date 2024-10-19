@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Login from './Login'; 
+import Login from './Login';
 
 const SignUp = ({ closeSignup }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -9,8 +9,6 @@ const SignUp = ({ closeSignup }) => {
     password: '',
     firstName: '',
     lastName: '',
-    dob: '',
-    country: '',
     gender: '',
     termsAccepted: false,
   });
@@ -92,28 +90,6 @@ const SignUp = ({ closeSignup }) => {
                 className="w-full sm:w-80 border-2 px-4 sm:px-6 py-4 sm:py-3 border-black text-black outline-none rounded-full bg-transparent mb-4"
                 required
               />
-              <input
-                type="date"
-                name="dob"
-                placeholder="Date of Birth"
-                value={formData.dob}
-                onChange={handleChange}
-                className="w-full sm:w-80 border-2 px-4 sm:px-6 py-4 sm:py-3 border-black text-black outline-none rounded-full bg-transparent mb-4"
-                required
-              />
-              <select
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                className="w-full sm:w-80 border-2 px-4 sm:px-6 py-4 sm:py-3 border-black text-black outline-none rounded-full bg-transparent mb-4"
-                required
-              >
-                <option value="">Select Country</option>
-                <option value="United States">United States</option>
-                <option value="India">India</option>
-                <option value="United Kingdom">United Kingdom</option>
-                {/* Add more countries as needed */}
-              </select>
               <div className="flex justify-around text-black items-start w-full sm:w-80">
                 <label>
                   <input

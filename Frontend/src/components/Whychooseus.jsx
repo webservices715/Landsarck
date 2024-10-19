@@ -1,55 +1,63 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import Slider from 'react-slick';
 
 const WhyChooseUs = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const settings = {
+    infinite: true,
+    speed: 4000, 
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setScrollPosition((prevPosition) => (prevPosition + 1) % 100);
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
+  const features = [
+    { icon: 'https://cdn-icons-png.freepik.com/256/6358/6358202.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'Flat 10 Year Warranty' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/9042/9042983.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'Easy EMIs' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/6750/6750126.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '600+ In-House Designers' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/3063/3063822.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '35,000+ Homes Delivered' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/1825/1825777.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '44 Studios' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/1527/1527807.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '22 Cities' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/4427/4427612.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'No Hidden Costs' },
+  ];
 
   return (
-    <section className="bg-gray-100 py-8">
+    <section className="bg-gray-50 py-12 px-2 lg:px-16 overflow-x-hidden">
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Why Choose Us</h2>
+        <h2 className="text-4xl lg:text-5xl text-gray-900 font-young-serif py-5">Why Choose Us</h2>
       </div>
-      <div className="overflow-hidden whitespace-nowrap">
-        <div className="flex space-x-12" style={{ transform: `translateX(-${scrollPosition}%)`, transition: 'transform 0.3s' }}>
-          {/* Slide 1 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon1.png" alt="Warranty" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">Flat 10 Year Warranty</h3>
+      <Slider {...settings}>
+        {features.map((feature, index) => (
+          <div key={index} className="p-4">
+            <div className="p-2 text-center">
+              <img src={feature.icon} alt={feature.title} className="h-24 mx-auto mb-6" />
+              <h3 className="text-xl font-bitter">{feature.title}</h3>
+            </div>
           </div>
-          {/* Slide 2 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon2.png" alt="EMIs" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">Easy EMIs</h3>
-          </div>
-          {/* Slide 3 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon3.png" alt="Designers" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">600+ In-House Designers</h3>
-          </div>
-          {/* Slide 4 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon4.png" alt="Homes" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">35,000+ Homes Delivered</h3>
-          </div>
-          {/* Slide 5 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon5.png" alt="Studios" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">44 Studios</h3>
-          </div>
-          {/* Slide 6 */}
-          <div className="min-w-max bg-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-icon6.png" alt="Cities" className="h-16 mx-auto" />
-            <h3 className="text-lg font-semibold mt-4">22 Cities</h3>
-          </div>
-        </div>
-      </div>
+        ))}
+      </Slider>
     </section>
   );
 };

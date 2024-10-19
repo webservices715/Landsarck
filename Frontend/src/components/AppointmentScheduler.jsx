@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'; // Import icons
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'; 
 
 const AppointmentScheduler = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [selectedTimes, setSelectedTimes] = useState({});
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
-  const [timeSelected, setTimeSelected] = useState(false); // New state to track if a time is selected
+  const [timeSelected, setTimeSelected] = useState(false); 
 
   const serviceOptions = [
     { title: "Free Consultation", time: "30 minutes", price: "Free" },
@@ -25,7 +25,7 @@ const AppointmentScheduler = () => {
       ...prevTimes,
       [date]: time,
     }));
-    setTimeSelected(true); // Mark time as selected
+    setTimeSelected(true);
   };
 
   const getNextDays = () => {
@@ -63,14 +63,14 @@ const AppointmentScheduler = () => {
 
   return (
     <div
-      className="min-h-screen p-20 bg-cover bg-center flex flex-col items-center justify-between"
+      className="min-h-screen p-20 bg-cover bg-center flex flex-col items-center justify-between opacity-90"
       style={{ backgroundImage: 'url(https://images.squarespace-cdn.com/content/v1/6706b570121dfe1f37390221/1722375620.686804-HMGLIWUZVJUYXYSFRXXK/imgg-od3-odnbd9id.png)' }}
     >
-      <div className="bg-white bg-opacity-80 p-8 rounded-md w-3/4 mt-10 shadow-lg">
-        <h1 className="text-2xl font-bold mb-4">Choose Appointment</h1>
+      <div className="bg-white bg-opacity-80 p-8 rounded-md w-[50%] mt-10 shadow-lg">
+        <h1 className="text-2xl font-semibold mb-4 font">Choose Appointment</h1>
 
         {/* Step 1: Choose a Plan */}
-        <div className="space-y-6">
+        <div className="space-y-6 ">
           {serviceOptions.map((option, index) => (
             // Render only selected plan or none if no plan is selected
             (selectedPlan === null || selectedPlan === option.title) && (
@@ -176,7 +176,7 @@ const AppointmentScheduler = () => {
 // ServiceOption as a child component inside AppointmentScheduler
 const ServiceOption = ({ title, time, price, onSelect, isSelected }) => {
   return (
-    <div className={`flex justify-between items-center p-4 border-b border-gray-200 ${isSelected ? 'bg-gray-200' : ''}`}>
+    <div className={`flex justify-between items-center p-6 border border-gray-300 ${isSelected ? 'bg-gray-200' : ''}`}>
       <div>
         <h3 className="font-semibold text-lg">{title}</h3>
         <p className="text-sm text-gray-600">{time}</p>

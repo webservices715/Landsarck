@@ -5,7 +5,7 @@ const AppointmentScheduler = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [selectedTimes, setSelectedTimes] = useState({});
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
-  const [timeSelected, setTimeSelected] = useState(false); // New state to track if a time is selected
+  const [timeSelected, setTimeSelected] = useState(false); // Track if time is selected
 
   const serviceOptions = [
     { title: "Free Consultation", time: "30 minutes", price: "Free" },
@@ -61,6 +61,11 @@ const AppointmentScheduler = () => {
     });
   };
 
+  const handleEdit = () => {
+    setTimeSelected(false); // Reset time selection
+    setSelectedPlan(null);  // Allow plan to be reselected
+  };
+
   return (
     <div
       className="min-h-screen p-20 bg-cover bg-center flex flex-col items-center justify-between"
@@ -86,7 +91,7 @@ const AppointmentScheduler = () => {
           ))}
         </div>
 
-        {/* Step 2: Choose a Time (only if a plan is selected and time has not been selected) */}
+        {/* Step 2: Choose a Time */}
         {selectedPlan && !timeSelected && (
           <div className="mt-10">
             <h2 className="text-xl font-semibold">Select a Time</h2>
@@ -141,10 +146,13 @@ const AppointmentScheduler = () => {
             <p><strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
               <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
             ))}</p>
+            <button onClick={handleEdit} className="text-blue-500 underline mt-4">
+              Edit Plan or Time
+            </button>
           </div>
         )}
 
-        {/* Step 3: Personal Information Form (only visible after both plan and time selection) */}
+        {/* Step 3: Personal Information Form */}
         {selectedPlan && timeSelected && (
           <div className="mt-10">
             <h2 className="text-xl font-semibold">Your Information</h2>

@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#dcdcdc] lg:px-6 lg:py-6">
       {/* Large centered heading */}
-      <h1 className="text-[4rem] md:text-[8rem] lg:text-[18rem] text-black mb-8 lg:text-center  font-young-serif">Contact Us</h1>
+      <h1 className="text-[4rem] md:text-[8rem] lg:text-[15rem] text-black mb-8 lg:text-center  font-young-serif">Contact Us</h1>
 
       {/* Two-column layout */}
       <div className="flex flex-col lg:flex-row lg:space-x-16 w-full px-4 sm:px-8 lg:px-16">

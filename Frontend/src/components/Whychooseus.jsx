@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 const WhyChooseUs = () => {
   const settings = {
     infinite: true,
-    speed: 4000, 
+    speed: 4000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,

@@ -16,7 +16,7 @@ function Home() {
       <GardenShop />
       <TerraceGardenPlan />
       <ProductSection />
-      {/* <AppointmentScheduler /> */}
+      <AppointmentScheduler />
       <MaintenancePlan />
       <AboutUs />
       <MarqueeComponent />

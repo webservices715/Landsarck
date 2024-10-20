@@ -6,11 +6,17 @@ const AppointmentScheduler = () => {
   const [selectedTimes, setSelectedTimes] = useState({});
   const [currentDayIndex, setCurrentDayIndex] = useState(0);
   const [timeSelected, setTimeSelected] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+  });
 
   const serviceOptions = [
-    { title: "Free Consultation", time: "30 minutes", price: "Free" },
-    { title: "Basic Service", time: "1 hour", price: "$99.00" },
-    { title: "Advanced Service", time: "1 hour", price: "$199.00" },
+    { title: 'Free Consultation', time: '30 minutes', price: 'Free' },
+    { title: 'Basic Service', time: '1 hour', price: '$99.00' },
+    { title: 'Advanced Service', time: '1 hour', price: '$199.00' },
   ];
 
   const handlePlanSelect = (plan) => {
@@ -49,92 +55,75 @@ const AppointmentScheduler = () => {
   const handleEdit = () => {
     setTimeSelected(false);
     setSelectedPlan(null);
+    setFormSubmitted(false);
+    setFormData({ fullName: '', email: '', phone: '' });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
   };
 
   return (
     <div
-      className="min-h-screen p-5 sm:p-10 lg:p-20 bg-cover bg-center flex flex-col items-center justify-between"
+      className="min-h-screen p-5 sm:p-10 lg:p-20 bg-cover bg-center flex flex-col items-center justify-center"
       style={{ backgroundImage: 'url(https://images.squarespace-cdn.com/content/v1/6706b570121dfe1f37390221/1722375620.686804-HMGLIWUZVJUYXYSFRXXK/imgg-od3-odnbd9id.png)' }}
     >
-      <div className="bg-white bg-opacity-80 p-6 sm:p-8 rounded-md w-full max-w-3xl mt-10 shadow-lg">
-        <h1 className="text-2xl font-bold mb-4 text-center">Choose Appointment</h1>
-
-        {/* Step 1: Choose a Plan */}
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceOptions.map((option, index) => (
-              (selectedPlan === null || selectedPlan === option.title) && (
-                <ServiceOption
-                  key={index}
-                  title={option.title}
-                  time={option.time}
-                  price={option.price}
-                  onSelect={() => handlePlanSelect(option.title)}
-                  isSelected={selectedPlan === option.title}
-                />
-              )
-            ))}
-          </div>
+      <div className="bg-white bg-opacity-95 p-10 rounded-xl shadow-2xl w-full max-w-4xl mt-10">
+        <div className='flex gap-2'>
+          <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>1</div>
+          <h1 className="text-3xl font-bold mb-8">Choose Appointment</h1>
         </div>
 
-        {/* Step 2: Choose a Time */}
-        {selectedPlan && !timeSelected && (
-          <div className="mt-10">
-            <h2 className="text-xl font-semibold text-center">Select a Time</h2>
-            <div className="flex justify-between items-center mt-4">
-              <button
-                onClick={getPrevDays}
-                className={`flex items-center px-4 py-2 rounded-md ${currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '}`}
-                disabled={currentDayIndex === 0}
-              >
-                <FiChevronLeft className="mr-2" />
-                Previous
-              </button>
-              <button
-                onClick={getNextDays}
-                className="flex items-center px-4 py-2 rounded-md text-gray-900"
-              >
-                Next
-                <FiChevronRight className="ml-2" />
-              </button>
-            </div>
+        {/* Step 1: Choose a Plan */}
+        <div className="flex flex-col space-y-4">
+          {serviceOptions.map((option, index) => (
+            (selectedPlan === null || selectedPlan === option.title) && (
+              <ServiceOption
+                key={index}
+                title={option.title}
+                time={option.time}
+                price={option.price}
+                onSelect={() => handlePlanSelect(option.title)}
+                isSelected={selectedPlan === option.title}
+              />
+            )
+          ))}
+        </div>
 
-            {/* Mobile View: Show only one day */}
-            <div className="flex flex-col lg:hidden justify-between items-center mt-4">
-              <div className="flex flex-col justify-between w-full px-2 sm:px-8 space-y-4">
-                {getDates().slice(0, 1).map((dateObj, index) => {
-                  const dateKey = dateObj.toLocaleDateString();
-                  return (
-                    <div key={index} className="flex flex-col items-center p-4 rounded-lg shadow-md mx-2 w-full">
-                      <span className="font-semibold text-lg">{getDayName(dateObj)}</span>
-                      <span className="text-sm mb-4">{getDateString(dateObj)}</span>
-                      <div className="grid gap-2">
-                        {["9:00 AM", "10:30 AM", "12:00 PM", "1:30 PM", "2:00 PM", "4:30 PM"].map((time, idx) => (
-                          <TimeSlot
-                            key={idx}
-                            time={time}
-                            isSelected={selectedTimes[dateKey] === time}
-                            onSelect={() => handleTimeSelect(time, dateKey)}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
+        {/* Accordion for Step 2: Choose a Time */}
+        <div className={`transition-all duration-500 overflow-hidden ${selectedPlan ? 'max-h-screen' : 'max-h-0'}`}>
+          {selectedPlan && !timeSelected && (
+            <div className="mt-10">
+              <h2 className="text-xl font-semibold mb-4">Select a Time</h2>
+              <div className="flex justify-between items-center mt-4">
+                <button
+                  onClick={getPrevDays}
+                  className={`flex items-center px-4 py-2 rounded-md ${currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '}`}
+                  disabled={currentDayIndex === 0}
+                >
+                  <FiChevronLeft className="mr-2" />
+                  Previous
+                </button>
+                <button
+                  onClick={getNextDays}
+                  className="flex items-center px-4 py-2 rounded-md text-gray-900"
+                >
+                  Next
+                  <FiChevronRight className="ml-2" />
+                </button>
               </div>
-            </div>
 
-            {/* Larger screens: Show all 3 days */}
-            <div className="hidden lg:flex flex-col lg:flex-row justify-between items-center mt-4">
-              <div className="flex flex-col lg:flex-row justify-between w-full px-2 sm:px-8 space-y-4 lg:space-y-0 lg:space-x-4">
+              {/* Display Dates and Time Slots */}
+              <div className="flex justify-between mt-8 space-x-4">
                 {getDates().map((dateObj, index) => {
                   const dateKey = dateObj.toLocaleDateString();
                   return (
-                    <div key={index} className="flex flex-col items-center p-4 rounded-lg shadow-md mx-2 w-full lg:w-1/3">
+                    <div key={index} className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-lg w-full">
                       <span className="font-semibold text-lg">{getDayName(dateObj)}</span>
                       <span className="text-sm mb-4">{getDateString(dateObj)}</span>
                       <div className="grid gap-2">
-                        {["9:00 AM", "10:30 AM", "12:00 PM", "1:30 PM", "2:00 PM", "4:30 PM"].map((time, idx) => (
+                        {['9:00 AM', '10:30 AM', '12:00 PM', '1:30 PM', '2:00 PM', '4:30 PM'].map((time, idx) => (
                           <TimeSlot
                             key={idx}
                             time={time}
@@ -148,84 +137,97 @@ const AppointmentScheduler = () => {
                 })}
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
-        {/* Display selected plan and time information */}
-        {selectedPlan && timeSelected && (
-          <div className="mt-10 text-center">
-            <h2 className="text-xl font-semibold">Selected Appointment</h2>
-            <p><strong>Plan:</strong> {selectedPlan}</p>
-            <p><strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
-              <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
-            ))}</p>
-            <button onClick={handleEdit} className="text-blue-500 underline mt-4">
-              Edit Plan or Time
-            </button>
+        {/* Your Information Section */}
+        <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${timeSelected ? 'max-h-screen' : 'max-h-15'}`}>
+          <div className='flex gap-2'>
+            <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>2</div>
+            <h2 className="text-2xl font-semibold mb-6">Your Information</h2>
           </div>
-        )}
-
-        {/* Step 3: Personal Information Form */}
-        {selectedPlan && timeSelected && (
-          <div className="mt-10">
-            <h2 className="text-xl font-semibold text-center">Your Information</h2>
-            <form className="mt-4 space-y-4">
+          {timeSelected && !formSubmitted && (
+            <form onSubmit={handleFormSubmit} className="space-y-4">
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md"
+                value={formData.fullName}
+                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                required
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                required
               />
-              <button className="bg-black text-white px-6 py-2 rounded-md w-full">
+              <button type="submit" className="bg-black text-white px-6 py-3 rounded-md w-full mt-4">
                 Submit Appointment
               </button>
             </form>
-          </div>
-        )}
+          )}
+        </div>
+
+        {/* Confirmation Section */}
+        <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'}`}>
+              <div className='flex gap-2'>
+                <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>3</div>
+                <h2 className="text-2xl font-semibold mb-6">Confirmation</h2>
+              </div>
+          {formSubmitted && (
+            <div>
+              <p className="mb-4"><strong>Plan:</strong> {selectedPlan}</p>
+              <p className="mb-4">
+                <strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
+                  <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
+                ))}
+              </p>
+              <p className="mb-4"><strong>Name:</strong> {formData.fullName}</p>
+              <p className="mb-4"><strong>Email:</strong> {formData.email}</p>
+              <p className="mb-4"><strong>Phone:</strong> {formData.phone}</p>
+              <button onClick={handleEdit} className="bg-black text-white px-6 py-3 rounded-md mt-4">
+                Edit Appointment
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
-const ServiceOption = ({ title, time, price, isSelected, onSelect }) => {
+const ServiceOption = ({ title, time, price, onSelect, isSelected }) => {
   return (
     <div
-      className={`flex flex-col justify-between items-center p-4 border border-gray-300 rounded-md ${isSelected ? 'bg-gray-200' : ''} w-full`}
+      className={`p-6 rounded-lg shadow-md cursor-pointer ${isSelected ? 'bg-black text-white' : 'bg-white text-gray-800'}`}
+      onClick={onSelect}
     >
-      <div className="text-center">
-        <h3 className="font-semibold text-lg mb-2">{title}</h3>
-        <p className="text-sm text-gray-600">{time}</p>
-      </div>
-      <div className="text-center mt-4">
-        <p className="text-md font-semibold">{price}</p>
-        <button
-          onClick={onSelect}
-          className="bg-black text-white px-6 py-2 mt-4 rounded-md"
-        >
-          Select
-        </button>
-      </div>
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p>{time}</p>
+      <p className="font-bold">{price}</p>
     </div>
   );
 };
 
 const TimeSlot = ({ time, isSelected, onSelect }) => {
   return (
-    <button
+    <div
+      className={`px-4 py-2 border rounded-md cursor-pointer ${isSelected ? 'bg-black text-white' : 'bg-white text-gray-800'}`}
       onClick={onSelect}
-      className={`p-2 rounded-md w-full text-left ${isSelected ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
     >
       {time}
-    </button>
+    </div>
   );
 };
 

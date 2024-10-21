@@ -156,7 +156,7 @@ const MaintenancePlan = () => {
 
       {/* Modal for the form */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50  mt-20 flex items-center z-30 justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50  mt-20 flex items-center z-30 px-2 justify-center">
           <div className="bg-white bg-opacity-90 p-8 rounded-lg font-bitter w-96">
             <h2 className="text-2xl  mb-4 font-young-serif">Fill Your Details</h2>
             <form onSubmit={handleFormSubmit}>

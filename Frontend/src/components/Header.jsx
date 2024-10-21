@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 py-6 lg:px-8 w-full z-50 ${headerClass}`}
+      className={`fixed top-0 left-0 pt-6 pb-2 lg:px-8 w-full z-50 ${headerClass}`}
     >
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo */}

@@ -37,7 +37,7 @@ const SignUp = ({ closeSignup }) => {
 
   return (
     <>
-      {!isLoginOpen && ( // Render the SignUp component only if isLoginOpen is false
+      {!isLoginOpen && ( 
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 font-bitter">
           <div className="bg-white mt-14 w-[90%] sm:w-[60%] md:w-[40%] lg:w-[30%] xl:w-[25%] flex flex-col items-center rounded-lg shadow-lg px-6 py-10 sm:py-12 md:py-16 relative">
             <img 

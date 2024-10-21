@@ -99,17 +99,17 @@ const MaintenancePlan = () => {
             <div className="flex flex-col items-center space-y-4">
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Standard Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Standard Plan - 3 Months')}
               
               >3 Months - ₹149</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Standard Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Standard Plan - 6 Months')}
               
               >6 Months - ₹249</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Standard Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Standard Plan - 12 Months')}
               
               >12 Months - ₹399</span>
             </div>
@@ -135,17 +135,17 @@ const MaintenancePlan = () => {
             <div className="flex flex-col items-center space-y-4">
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Premium Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Premium Plan - 3 Months')}
              
              >3 Months - ₹199</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Premium Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Premium Plan - 6 Months')}
               
               >6 Months - ₹349</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
-              onClick={() => handlePlanClick('Premium Plan - Basic Plan - 3 Months')}
+              onClick={() => handlePlanClick('Premium Plan - 12 Months')}
               
               >12 Months - ₹499</span>
             </div>

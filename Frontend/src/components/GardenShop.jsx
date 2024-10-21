@@ -59,7 +59,7 @@ const GardenShop = () => {
             <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">
               COMMERCIAL LANDSCAPE
             </h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-40">
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-32">
               Add your pricing strategy. Be sure to include important details
               like value, length of service, and why it’s unique.
             </p>

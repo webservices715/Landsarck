@@ -56,7 +56,7 @@
   .dropdown-menu {
     display: none; 
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.842); 
+    background-color: rgba(255, 255, 255, 0.958); 
     z-index: 1000;
     padding: 10px 4px;
   }
@@ -85,6 +85,6 @@
 }
 
 .dropdown-menu a:hover {
-  background-color: #f3f4f6;
+  background-color: #ffffff;
   color: #1a1a1a;
 }

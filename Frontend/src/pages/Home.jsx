@@ -2,6 +2,7 @@ import React from 'react'
 import AboutUs from '../components/AboutUs'
 import AppointmentScheduler from '../components/AppointmentScheduler'
 import ContactUs from '../components/ContactUs'
+import FeaturesSection from '../components/FeaturesSection'
 import GardenShop from '../components/GardenShop'
 import Hero from '../components/Hero'
 import MaintenancePlan from '../components/MaintenancePlan '
@@ -23,6 +24,7 @@ function Home() {
       <AboutUs />
       <MarqueeComponent />
       <ContactUs />
+      <FeaturesSection />
     </div>
   )
 }

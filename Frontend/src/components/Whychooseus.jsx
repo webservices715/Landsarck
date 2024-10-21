@@ -34,13 +34,13 @@ const WhyChooseUs = () => {
   };
 
   const features = [
-    { icon: 'https://cdn-icons-png.freepik.com/256/6358/6358202.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'Flat 10 Year Warranty' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/9042/9042983.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'Easy EMIs' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/6750/6750126.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '600+ In-House Designers' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/3063/3063822.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '35,000+ Homes Delivered' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/1825/1825777.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '44 Studios' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/1527/1527807.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '22 Cities' },
-    { icon: 'https://cdn-icons-png.freepik.com/256/4427/4427612.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'No Hidden Costs' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/640/640972.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'Flat 10 Year Warranty' },
+    { icon: 'https://cdn-icons-png.flaticon.com/128/15512/15512495.png', title: 'Easy EMIs' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/1767/1767425.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: '600+ In-House Designers' },
+    { icon: 'https://cdn-icons-png.flaticon.com/128/15654/15654467.png', title: '35,000+ Homes Delivered' },
+    { icon: 'https://cdn-icons-png.flaticon.com/128/942/942153.png', title: '44 Studios' },
+    { icon: 'https://cdn-icons-png.flaticon.com/128/2942/2942076.png', title: '22 Cities' },
+    { icon: 'https://cdn-icons-png.freepik.com/256/11441/11441951.png?uid=R122666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid', title: 'No Hidden Costs' },
   ];
 
   return (

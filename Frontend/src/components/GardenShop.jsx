@@ -11,7 +11,7 @@ const GardenShop = () => {
         >
           One-stop shop for all Garden things
         </a>
-        <p className="px-2 sm:px-12 md:px-20 lg:px-[20rem] md:text-center text-lg sm:text-xl">
+        <p className="px-2 sm:px-12 md:px-20 text-gray-600 lg:px-[20rem] md:text-center text-lg sm:text-xl">
           Be it end-to-end interiors, renovation or modular solutions, we have
           it all for your home or office. With a wide range of furniture &
           decor, we have your back from start to finish.

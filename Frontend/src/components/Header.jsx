@@ -56,101 +56,101 @@ const Header = () => {
           <nav className="hidden lg:flex space-x-6">
             <NavLink to="/">Home</NavLink>
 
-            {/* Services Dropdown for Desktop */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsServicesDropdownOpen(true)}
-              onMouseLeave={() => setIsServicesDropdownOpen(false)}
-            >
-              <button className="hover:text-gray-300">Services</button>
-              <div
-                className={`dropdown-menu w-52 ${
-                  isServicesDropdownOpen ? "show" : ""
-                }`}
-              >
-                <NavLink to="/terrace-garden" className="block px-4 py-2">
-                  Terrace Garden
-                </NavLink>
-                <NavLink to="/landscape-architect" className="block px-4 py-2">
-                  Landscape Architect & Designer
-                </NavLink>
-                <NavLink to="/horticulturist" className="block px-4 py-2">
-                  Horticulturist
-                </NavLink>
-                <NavLink to="/agriculture-expert" className="block px-4 py-2">
-                  Agriculture Expert
-                </NavLink>
-                <NavLink to="/garden-maintenance" className="block px-4 py-2">
-                  Garden Maintenance
-                </NavLink>
-                <NavLink
-                  to="/irrigation-specialist"
-                  className="block px-4 py-2"
-                >
-                  Irrigation Specialist & Installation
-                </NavLink>
-                <NavLink to="/waterproofing-expert" className="block px-4 py-2">
-                  Water Proofing Expert
-                </NavLink>
-                <NavLink to="/landscape-contractor" className="block px-4 py-2">
-                  Landscape Contractor
-                </NavLink>
-                <NavLink to="/pool-technician" className="block px-4 py-2">
-                  Swimming Pool Service Technician
-                </NavLink>
-              </div>
-            </div>
+<div
+  className="relative"
+  onMouseEnter={() => setIsServicesDropdownOpen(true)}
+  onMouseLeave={() => setIsServicesDropdownOpen(false)}
+>
+  <button className="hover:text-gray-300">Services</button>
+  <div
+    className={`dropdown-menu w-[30rem]  ${isServicesDropdownOpen ? "show" : ""}`}
+  >
+    <div className="grid grid-cols-2 gap-2"> {/* Two-column grid */}
+      <NavLink to="/terrace-garden" className="block px-4 py-2">
+        Terrace Garden
+      </NavLink>
+      <NavLink to="/landscape-architect" className="block px-4 py-2">
+        Landscape Architect & Designer
+      </NavLink>
+      <NavLink to="/horticulturist" className="block px-4 py-2">
+        Horticulturist
+      </NavLink>
+      <NavLink to="/agriculture-expert" className="block px-4 py-2">
+        Agriculture Expert
+      </NavLink>
+      <NavLink to="/garden-maintenance" className="block px-4 py-2">
+        Garden Maintenance
+      </NavLink>
+      <NavLink
+        to="/irrigation-specialist"
+        className="block px-4 py-2"
+      >
+        Irrigation Specialist & Installation
+      </NavLink>
+      <NavLink to="/waterproofing-expert" className="block px-4 py-2">
+        Water Proofing Expert
+      </NavLink>
+      <NavLink to="/landscape-contractor" className="block px-4 py-2">
+        Landscape Contractor
+      </NavLink>
+      <NavLink to="/pool-technician" className="block px-4 py-2">
+        Swimming Pool Service Technician
+      </NavLink>
+    </div>
+  </div>
+</div>
 
-            {/* Shop Dropdown for Desktop */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsShopDropdownOpen(true)}
-              onMouseLeave={() => setIsShopDropdownOpen(false)}
-            >
-              <button className="hover:text-gray-300">Shop</button>
-              <div
-                className={`dropdown-menu w-52 ${
-                  isShopDropdownOpen ? "show" : ""
-                }`}
-              >
-                <NavLink to="/tree" className="block px-4 py-2">
-                  Tree
-                </NavLink>
-                <NavLink to="/plants" className="block px-4 py-2">
-                  Plants
-                </NavLink>
-                <NavLink to="/ground-covers" className="block px-4 py-2">
-                  Ground Covers
-                </NavLink>
-                <NavLink to="/creeper" className="block px-4 py-2">
-                  Creeper
-                </NavLink>
-                <NavLink to="/seeds" className="block px-4 py-2">
-                  Seeds
-                </NavLink>
-                <NavLink to="/pots-planter" className="block px-4 py-2">
-                  Pots & Planter
-                </NavLink>
-                <NavLink to="/garden-lights" className="block px-4 py-2">
-                  Garden Lights
-                </NavLink>
-                <NavLink to="/outdoor-furniture" className="block px-4 py-2">
-                  Outdoor Furniture
-                </NavLink>
-                <NavLink to="/fire-features" className="block px-4 py-2">
-                  Fire Features
-                </NavLink>
-                <NavLink to="/garden-ornament" className="block px-4 py-2">
-                  Garden Ornament
-                </NavLink>
-                <NavLink to="/stone-tile" className="block px-4 py-2">
-                  Stone & Tile
-                </NavLink>
-                <NavLink to="/soil-fertilizer" className="block px-4 py-2">
-                  Soil & Fertilizer
-                </NavLink>
-              </div>
-            </div>
+
+<div
+  className="relative"
+  onMouseEnter={() => setIsShopDropdownOpen(true)}
+  onMouseLeave={() => setIsShopDropdownOpen(false)}
+>
+  <button className="hover:text-gray-300">Shop</button>
+  <div
+    className={`dropdown-menu w-[22rem] ${isShopDropdownOpen ? "show" : ""}`}
+  >
+    <div className="grid grid-cols-2 gap-2"> {/* Two-column grid */}
+      <NavLink to="/tree" className="block px-4 py-2">
+        Tree
+      </NavLink>
+      <NavLink to="/plants" className="block px-4 py-2">
+        Plants
+      </NavLink>
+      <NavLink to="/ground-covers" className="block px-4 py-2">
+        Ground Covers
+      </NavLink>
+      <NavLink to="/creeper" className="block px-4 py-2">
+        Creeper
+      </NavLink>
+      <NavLink to="/seeds" className="block px-4 py-2">
+        Seeds
+      </NavLink>
+      <NavLink to="/pots-planter" className="block px-4 py-2">
+        Pots & Planter
+      </NavLink>
+      <NavLink to="/garden-lights" className="block px-4 py-2">
+        Garden Lights
+      </NavLink>
+      <NavLink to="/outdoor-furniture" className="block px-4 py-2">
+        Outdoor Furniture
+      </NavLink>
+      <NavLink to="/fire-features" className="block px-4 py-2">
+        Fire Features
+      </NavLink>
+      <NavLink to="/garden-ornament" className="block px-4 py-2">
+        Garden Ornament
+      </NavLink>
+      <NavLink to="/stone-tile" className="block px-4 py-2">
+        Stone & Tile
+      </NavLink>
+      <NavLink to="/soil-fertilizer" className="block px-4 py-2">
+        Soil & Fertilizer
+      </NavLink>
+    </div>
+  </div>
+</div>
+
 
             {/* Course Dropdown for Desktop */}
             <div

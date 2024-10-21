@@ -63,7 +63,7 @@ const Header = () => {
 >
   <button className="hover:text-gray-300">Services</button>
   <div
-    className={`dropdown-menu w-[30rem]  ${isServicesDropdownOpen ? "show" : ""}`}
+    className={`dropdown-menu w-[28rem]  ${isServicesDropdownOpen ? "show" : ""}`}
   >
     <div className="grid grid-cols-2 gap-2"> {/* Two-column grid */}
       <NavLink to="/terrace-garden" className="block px-4 py-2">

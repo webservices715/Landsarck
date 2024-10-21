@@ -1,16 +1,21 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
+import "../App.css";
 
 const GardenShop = () => {
   return (
     <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-20">
-      <div className="flex justify-center mb-8">
+      <div className="flex flex-col justify-center items-center mb-12">
         <a
           href="#"
-          className="bg-zinc-900 text-white text-base sm:text-lg font-bitter px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
+          className="text-zinc-800 lg:text-4xl md:text-3xl text-2xl font-semibold font-bitter px-2 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
         >
           One-stop shop for all Garden things
         </a>
+        <p className="px-2 sm:px-12 md:px-20 lg:px-[20rem] md:text-center text-lg sm:text-xl">
+          Be it end-to-end interiors, renovation or modular solutions, we have
+          it all for your home or office. With a wide range of furniture &
+          decor, we have your back from start to finish.
+        </p>
       </div>
 
       {/* Services Section */}
@@ -25,9 +30,12 @@ const GardenShop = () => {
             />
           </div>
           <div className="py-8">
-            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">RESIDENTIAL & FARM LANDSCAPE</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-16">
-              Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
+            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">
+              RESIDENTIAL & FARM LANDSCAPE
+            </h4>
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-32">
+              Add your pricing strategy. Be sure to include important details
+              like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"
@@ -48,9 +56,12 @@ const GardenShop = () => {
             />
           </div>
           <div className="py-8">
-            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">COMMERCIAL LANDSCAPE</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-24">
-              Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
+            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">
+              COMMERCIAL LANDSCAPE
+            </h4>
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-12 lg:mb-40">
+              Add your pricing strategy. Be sure to include important details
+              like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"
@@ -71,9 +82,12 @@ const GardenShop = () => {
             />
           </div>
           <div className="py-8">
-            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">RENOVATIONS</h4>
-            <p className="text-base sm:text-lg md:text-xl font-bitter mb-10 lg:mb-24">
-              Add your pricing strategy. Be sure to include important details like value, length of service, and why it’s unique.
+            <h4 className="text-xl sm:text-2xl md:text-3xl mb-4 font-young-serif">
+              RENOVATIONS
+            </h4>
+            <p className="text-base sm:text-lg md:text-xl font-bitter mb-10 lg:mb-40">
+              Add your pricing strategy. Be sure to include important details
+              like value, length of service, and why it’s unique.
             </p>
             <a
               href="#"

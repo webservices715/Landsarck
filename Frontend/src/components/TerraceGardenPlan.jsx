@@ -23,11 +23,16 @@ const plans = [
 
 const TerraceGardenPlan = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(plans[0].imageUrl);
+  const [expandedPlanImage, setExpandedPlanImage] = useState(null);
 
   const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-    setSelectedImage(plans[index].imageUrl);
+    if (openIndex === index) {
+      setOpenIndex(null);
+      setExpandedPlanImage(null); // Collapse the image
+    } else {
+      setOpenIndex(index);
+      setExpandedPlanImage(plans[index].imageUrl); // Set the image of the expanded plan
+    }
   };
 
   return (
@@ -47,19 +52,16 @@ const TerraceGardenPlan = () => {
           unique landscape vision.
         </p>
 
-        {/* Accordion Section */}
-        <div className="accordion">
-          {plans.map((plan, index) => (
-            <div key={index} className="border-b-2 border-gray-800 mb-4">
+        {plans.map((plan, index) => (
+          <div className="accordion w-full" key={index}>
+            <div className="border-b-2 border-gray-800 mb-4">
               <h4
                 className="flex justify-between items-center cursor-pointer py-4 md:py-5 text-xl md:text-2xl lg:text-3xl font-young-serif"
                 onClick={() => toggleAccordion(index)}
               >
                 <span>{plan.title}</span>
                 <span
-                  className={`${
-                    openIndex === index ? '' : 'transform rotate-0'
-                  } transition-all ease-in-out duration-300 text-lg md:text-xl lg:text-2xl`}
+                  className={`transition-all ease-in-out duration-300 text-lg md:text-xl lg:text-2xl ${openIndex === index ? 'transform rotate-180' : 'rotate-0'}`}
                 >
                   {openIndex === index ? (
                     <i className="fa-solid fa-minus"></i>
@@ -70,19 +72,31 @@ const TerraceGardenPlan = () => {
               </h4>
               <div
                 style={{
-                  maxHeight: openIndex === index ? '1000px' : '0px',
+                  height: openIndex === index ? 'auto' : '0',
                   overflow: 'hidden',
-                  transition: 'max-height 0.5s ease',
+                  transition: 'height 0.5s ease-in-out',
                 }}
-                className="accordion-content"
+                className="accordion-content md:flex block items-start w-[90vw]"
               >
-                <div className="pb-4 text-gray-700 font-bitter text-sm md:text-base lg:text-lg">
-                  <p>{plan.description}</p>
-                </div>
+                {expandedPlanImage && (
+                  <>
+                    <div className="flex-1 p-4 font-bitter">
+                      <p>{plan.description}</p>
+                    </div>
+                    <div className="mt-4 flex-1">
+                      <img
+                        src={expandedPlanImage}
+                        alt="Expanded Plan"
+                        className="object-cover w-full h-[350px] lg:h-[400px]"
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+
         <div className="text-left mt-16 md:mt-24">
           <a
             href="/services"
@@ -93,13 +107,15 @@ const TerraceGardenPlan = () => {
         </div>
       </div>
 
-      {/* Right section (Image) */}
-      <div className="lg:w-1/2 lg:pl-16 lg:pt-0 pt-12">
-        <img
-          src={selectedImage}
-          alt="Terrace Garden"
-          className="object-cover w-full h-[350px] sm:h-[500px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]"
-        />
+      {/* Right section (Static Image) */}
+      <div className="lg:w-1/2 lg:pl-4 lg:pt-0 pt-12 flex-shrink-0">
+        {!expandedPlanImage && ( // Only show static image if no plan is expanded
+          <img
+            src="https://plus.unsplash.com/premium_photo-1680300960892-bd11b59b469b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Static image URL
+            alt="Terrace Garden"
+            className="object-cover hidden lg:block w-full h-[300px] lg:h-[900px]"
+          />
+        )}
       </div>
     </div>
   );

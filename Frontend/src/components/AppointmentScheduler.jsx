@@ -83,7 +83,7 @@ import React, { useState } from 'react';
        <div className="bg-white bg-opacity-60 p-10 rounded-xl shadow-2xl w-full max-w-4xl mt-10">
          <div className='flex gap-2'>
            <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>1</div>
-           <h1 className="text-3xl font-bold mb-8">Choose Appointment</h1>
+           <h1 className="text-3xl font-medium mb-8 font-young-serif">Choose Appointment</h1>
          </div>
  
          {/* Step 1: Choose a Plan */}
@@ -106,7 +106,7 @@ import React, { useState } from 'react';
          <div className={`transition-all duration-500 overflow-hidden ${selectedPlan ? 'max-h-screen' : 'max-h-0'}`}>
            {selectedPlan && !timeSelected && (
              <div className="mt-10">
-               <h2 className="text-xl font-semibold mb-4">Select a Time</h2>
+               <h2 className="text-xl font-semibold font-young-serif mb-4">Select a Time</h2>
                <div className="flex justify-between items-center mt-4">
                  <button
                    onClick={getPrevDays}
@@ -155,7 +155,7 @@ import React, { useState } from 'react';
          <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${timeSelected ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>2</div>
-             <h2 className="text-2xl font-semibold mb-6">Your Information</h2>
+             <h2 className="text-2xl font-medium font-young-serif mb-6">Your Information</h2>
            </div>
            {timeSelected && !formSubmitted && (
              <form onSubmit={handleFormSubmit} className="space-y-4">
@@ -194,7 +194,7 @@ import React, { useState } from 'react';
          <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>3</div>
-             <h2 className="text-2xl font-semibold mb-6">Confirm Appointment</h2>
+             <h2 className="text-2xl font-medium font-young-serif mb-6">Confirm Appointment</h2>
            </div>
            {formSubmitted && (
              <div>

@@ -15,6 +15,7 @@ const icons = [
   { id: 4, icon: FaInstagram, link: "mailto:dr." },
   { id: 5, icon: FaFacebookF, link: "mailto:dr." },
   { id: 6, icon: FaLinkedinIn, link: "mailto:dr." },
+  { id: 7, icon: IoLogoYoutube, link: "youtube" },
 ];
 
 const Sidebar = () => {

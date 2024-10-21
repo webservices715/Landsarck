@@ -28,17 +28,19 @@ const services = [
 const GardenShop = () => {
   return (
     <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-16 flex flex-col items-center">
-      <div className="flex flex-col justify-center items-center mb-8">
+   <div className="flex flex-col justify-center items-center mb-12">
         <a
           href="#"
-          className="bg-gray-300 text-black text-base font-bold sm:text-lg font-bitter px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
+          className="text-zinc-800 lg:text-4xl md:text-3xl text-2xl font-semibold font-bitter px-2 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
         >
           One-stop shop for all Garden things
         </a>
-        <p className="text-gray-600 mt-4 text-sm sm:text-base lg:text-lg text-center">
-          We provide everything you need to create and maintain the perfect garden.
+        <p className="px-2 sm:px-12 md:px-20 text-gray-600 lg:px-[20rem] md:text-center text-lg sm:text-xl">
+          Be it end-to-end interiors, renovation or modular solutions, we have
+          it all for your home or office. With a wide range of furniture &
+          decor, we have your back from start to finish.
         </p>
-      </div>
+      </div>
 
       {/* Services Section */}
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-6 text-center">

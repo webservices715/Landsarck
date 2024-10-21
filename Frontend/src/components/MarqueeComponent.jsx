@@ -3,31 +3,29 @@ import { gsap } from "gsap";
 
 const MarqueeComponent = () => {
   useEffect(() => {
-    const dur = 10; // Duration for one full loop
-    const tl = gsap.timeline({ repeat: -1 }); // Infinite loop
+    const dur = 20; // Increase duration for a smoother loop
+    const tl = gsap.timeline({ repeat: -1, defaults: { ease: "Power0.easeNone" } }); // Infinite loop with linear ease
 
     // Animate the first text
     tl.to("#masterTextPath1", {
       duration: dur,
-      attr: { startOffset: "-100%" }, 
-      ease: "none",
+      attr: { startOffset: "-100%" },
     })
-    // Animate the second text with a slight delay
+    // Animate the second text with a slight delay for continuous flow
     .to("#masterTextPath2", {
       duration: dur,
-      attr: { startOffset: "-200%" }, 
-      ease: "none",
-    }, `-=${dur / 3}`); // Sync the second text to create a continuous flow
+      attr: { startOffset: "-100%" }, 
+    }, `-=${dur / 1.5}`); // Sync to create smoother flow between texts
   }, []);
 
   return (
-    <div className="flex lg:py-20 py-24 bg-[#f4f4f4] ">
+    <div className="flex lg:py-20 py-24 bg-[#f4f4f4]">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 2304 298"
-        className=" h-[56vh]"
+        className="h-[56vh]"
       >
         {/* Define path for the text to follow */}
         <path
@@ -56,7 +54,7 @@ const MarqueeComponent = () => {
             id="masterTextPath2"
             xlinkHref="#master-line"
             startOffset="200%"  
-            className="text-[12rem] tracking-[0.05em] font-young-serif"
+            className="text-[8rem] tracking-[0.05em] font-young-serif"
           >
             Follow Us On Social Media
           </textPath>

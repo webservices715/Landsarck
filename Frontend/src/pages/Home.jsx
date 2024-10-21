@@ -24,7 +24,7 @@ function Home() {
       <AppointmentScheduler />
       <MaintenancePlan />
       <AboutUs />
-      <MarqueeComponent />
+      {/* <MarqueeComponent /> */}
       <ContactUs />
       <FeaturesSection />
     </div>

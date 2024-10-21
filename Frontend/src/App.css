@@ -49,4 +49,42 @@
     text-transform: uppercase;
     white-space: nowrap;
   }
+
+
+
   
+  .dropdown-menu {
+    display: none; 
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.842); 
+    z-index: 1000;
+    padding: 10px 4px;
+  }
+  
+  .dropdown-menu.show {
+    display: block; 
+  }
+  
+  .mobile-dropdown {
+    display: none;
+    margin-left: 20px; 
+  }
+  
+  .mobile-dropdown.open {
+    display: block; 
+  }
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  border-bottom: 2px;
+  border: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f3f4f6;
+  color: #1a1a1a;
+}

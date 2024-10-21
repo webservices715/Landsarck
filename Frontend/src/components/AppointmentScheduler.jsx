@@ -73,7 +73,7 @@ import React, { useState } from 'react';
        className="min-h-screen p-5 sm:p-10 lg:p-20 bg-cover bg-center flex flex-col items-center justify-center"
        style={{ backgroundImage: 'url(https://images.squarespace-cdn.com/content/v1/6706b570121dfe1f37390221/1722375620.686804-HMGLIWUZVJUYXYSFRXXK/imgg-od3-odnbd9id.png)' }}
      >
-       <div className="bg-white bg-opacity-95 p-10 rounded-xl shadow-2xl w-full max-w-4xl mt-10">
+       <div className="bg-white bg-opacity-70 p-10  shadow-2xl w-full max-w-4xl mt-10">
          <div className='flex gap-2'>
            <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>1</div>
            <h1 className="text-3xl font-bold mb-8">Choose Appointment</h1>
@@ -184,7 +184,7 @@ import React, { useState } from 'react';
          </div>
  
          {/* Confirmation Section */}
-         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'} ` }>
+         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'}`  }>
                <div className='flex gap-2'>
                  <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>3</div>
                  <h2 className="text-2xl font-semibold mb-6">Confirmation</h2>
@@ -194,7 +194,7 @@ import React, { useState } from 'react';
                <p className="mb-4"><strong>Plan:</strong> {selectedPlan}</p>
                <p className="mb-4">
                  <strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
-                   <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
+                   <span key={date}>{$`{getDateString(new Date(date))} at ${time}`}</span>
                  ))}
                </p>
                <p className="mb-4"><strong>Name:</strong> {formData.fullName}</p>
@@ -217,15 +217,23 @@ import React, { useState } from 'react';
  const ServiceOption = ({ title, time, price, onSelect, isSelected }) => {
    return (
      <div
-       className={`p-6 rounded-lg shadow-md cursor-pointer bg-white text-gray-800`}
-       onClick={onSelect}
+       className={`p-6 rounded-lg  cursor-pointer bg-white bg-opacity-80 text-gray-800 flex justify-between`}
      >
+       <div>
        <h3 className="text-lg font-semibold">{title}</h3>
        <p>{time}</p>
        <p className="font-bold">{price}</p>
+       </div>
+       <button
+         className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-24"
+         onClick={onSelect}
+       >
+         Book Now
+       </button>
      </div>
    );
  };
+ 
  
  const TimeSlot = ({ time, isSelected, onSelect }) => {
    return (

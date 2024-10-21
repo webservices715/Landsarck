@@ -8,12 +8,15 @@ import Hero from '../components/Hero'
 import MaintenancePlan from '../components/MaintenancePlan '
 import MarqueeComponent from '../components/MarqueeComponent'
 import ProductSection from '../components/ProductSection'
+import Sidebar from '../components/Sidebar'
 import TerraceGardenPlan from '../components/TerraceGardenPlan'
 import Whychooseus from '../components/Whychooseus'
 
 function Home() {
   return (
     <div>
+        <Sidebar />
+
       <Hero />
       <Whychooseus />
       <GardenShop />

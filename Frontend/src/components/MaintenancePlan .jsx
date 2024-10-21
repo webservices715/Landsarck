@@ -211,7 +211,7 @@ const MaintenancePlan = () => {
                 </button>
                 <button
                   type="button"
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg font-bitter hover:bg-red-600"
+                  className="border border-black text-black px-4 py-2 rounded-lg font-bitter hover:bg-black transition-all ease-in-out duration-300 hover:text-white"
                   onClick={() => setShowModal(false)}
                 >
                   Cancel

@@ -5,7 +5,7 @@ const plans = [
     title: 'Basic Landscape',
     description:
       'Our basic garden pricing starts at ₹500 to ₹800 per square foot. This package includes standard plants, planters, and soil, providing a comprehensive solution for your gardening needs. Depending on the specific selections and layout, we can tailor a garden that fits both your aesthetic preferences and budget effectively.',
-    imageUrl: 'https://images.pexels.com/photos/23363853/pexels-photo-23363853/free-photo-of-pole-in-a-field.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: 'https://images.pexels.com/photos/28962898/pexels-photo-28962898/free-photo-of-modern-waterfront-villa-with-palm-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
   {
     title: 'Premium Landscape',
@@ -111,7 +111,7 @@ const TerraceGardenPlan = () => {
       <div className="lg:w-1/2 lg:pl-4 lg:pt-0 pt-12 flex-shrink-0">
         {!expandedPlanImage && ( // Only show static image if no plan is expanded
           <img
-            src="https://plus.unsplash.com/premium_photo-1680300960892-bd11b59b469b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Static image URL
+            src="https://images.pexels.com/photos/19836380/pexels-photo-19836380/free-photo-of-lichtspiel-mit-architektonischem-gebaude.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Static image URL
             alt="Terrace Garden"
             className="object-cover hidden lg:block w-full h-[300px] lg:h-[900px]"
           />

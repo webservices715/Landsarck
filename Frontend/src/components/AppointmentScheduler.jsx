@@ -4,7 +4,7 @@ import React, { useState } from 'react';
  const AppointmentScheduler = () => {
    const [selectedPlan, setSelectedPlan] = useState(null);
    const [selectedTimes, setSelectedTimes] = useState({});
-   const [currentDayIndex, setCurrentDayIndex] = useState(0); // Track the first day in the window
+   const [currentDayIndex, setCurrentDayIndex] = useState(0); 
    const [timeSelected, setTimeSelected] = useState(false);
    const [formSubmitted, setFormSubmitted] = useState(false);
    const [formData, setFormData] = useState({
@@ -33,27 +33,24 @@ import React, { useState } from 'react';
      setTimeSelected(true);
    };
  
-   // Shift day window forward by 1 or 3 days depending on screen size
    const getNextDays = () => {
-     const daysToShow = window.innerWidth < 640 ? 1 : 3; // Show 1 day for small screens, 3 for large
+     const daysToShow = window.innerWidth < 640 ? 1 : 3;
      setCurrentDayIndex((prevIndex) => prevIndex + daysToShow);
    };
  
-   // Shift day window backward by 1 or 3 days, ensure it doesn't go below 0
    const getPrevDays = () => {
      const daysToShow = window.innerWidth < 640 ? 1 : 3;
      setCurrentDayIndex((prevIndex) => Math.max(prevIndex - daysToShow, 0));
    };
  
-   // Get the current set of days based on the index and screen size
    const getDates = () => {
-     const daysToShow = window.innerWidth < 640 ? 1 : 3; // 1 day for small screens, 3 for large
+     const daysToShow = window.innerWidth < 640 ? 1 : 3; 
      const today = new Date();
-     today.setHours(0, 0, 0, 0); // Reset to the start of today
+     today.setHours(0, 0, 0, 0); 
      const dates = [];
      for (let i = 0; i < daysToShow; i++) {
        const date = new Date(today);
-       date.setDate(today.getDate() + currentDayIndex + i); // Shift days based on the index
+       date.setDate(today.getDate() + currentDayIndex + i); 
        dates.push(date);
      }
      return dates;
@@ -86,7 +83,6 @@ import React, { useState } from 'react';
            <h1 className="text-3xl font-bold mb-8">Choose Appointment</h1>
          </div>
  
-         {/* Step 1: Choose a Plan */}
          <div className="flex flex-col space-y-4">
            {serviceOptions.map((option, index) => (
              (selectedPlan === null || selectedPlan === option.title) && (
@@ -102,7 +98,6 @@ import React, { useState } from 'react';
            ))}
          </div>
  
-         {/* Accordion for Step 2: Choose a Time */}
          <div className={`transition-all duration-500 overflow-hidden ${selectedPlan ? 'max-h-screen' : 'max-h-0'}`}>
            {selectedPlan && !timeSelected && (
              <div className="mt-10">
@@ -125,7 +120,6 @@ import React, { useState } from 'react';
                  </button>
                </div>
  
-               {/* Display Dates and Time Slots */}
                <div className="flex flex-col sm:flex-row sm:space-x-4 mt-8">
                  {getDates().map((dateObj, index) => {
                    const dateKey = dateObj.toLocaleDateString();
@@ -151,7 +145,6 @@ import React, { useState } from 'react';
            )}
          </div>
  
-         {/* Your Information Section */}
          <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${timeSelected ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>2</div>
@@ -190,7 +183,6 @@ import React, { useState } from 'react';
            )}
          </div>
  
-         {/* Confirmation Section */}
          <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>3</div>

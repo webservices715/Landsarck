@@ -52,6 +52,9 @@ const TerraceGardenPlan = () => {
           unique landscape vision.
         </p>
 
+        {/* Border line before Basic Plan */}
+        <div className="border-t-2 border-gray-800 mb-6"></div>
+
         {plans.map((plan, index) => (
           <div className="accordion w-full" key={index}>
             <div className="border-b-2 border-gray-800 mb-4">

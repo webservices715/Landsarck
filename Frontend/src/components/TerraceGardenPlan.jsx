@@ -36,7 +36,7 @@ const TerraceGardenPlan = () => {
   };
 
   return (
-    <div className="mx-auto p-6 lg:flex lg:space-x-8 lg:px-16 lg:py-12">
+    <div className="relative mx-auto p-6 lg:flex lg:space-x-8 lg:px-16 lg:py-12">
       {/* Left section (Text and Accordion) */}
       <div className="lg:w-1/2 lg:px-4">
         <h1
@@ -79,22 +79,11 @@ const TerraceGardenPlan = () => {
                   overflow: 'hidden',
                   transition: 'height 0.5s ease-in-out',
                 }}
-                className="accordion-content md:flex block items-start w-[90vw]"
+                className="accordion-content"
               >
-                {expandedPlanImage && (
-                  <>
-                    <div className="flex-1 p-4 font-bitter">
-                      <p>{plan.description}</p>
-                    </div>
-                    <div className="mt-4 flex-1">
-                      <img
-                        src={expandedPlanImage}
-                        alt="Expanded Plan"
-                        className="object-cover w-full h-[350px] lg:h-[400px]"
-                      />
-                    </div>
-                  </>
-                )}
+                <div className="p-4 font-bitter">
+                  <p>{plan.description}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -110,15 +99,36 @@ const TerraceGardenPlan = () => {
         </div>
       </div>
 
-      {/* Right section (Static Image) */}
-      <div className="lg:w-1/2 lg:pl-4 lg:pt-0 pt-12 flex-shrink-0">
-        {!expandedPlanImage && ( // Only show static image if no plan is expanded
+      {/* Right section (Expanded Image) */}
+      <div className="lg:w-1/2 lg:pl-4 lg:pt-0 pt-12 flex-shrink-0 relative">
+        {expandedPlanImage ? (
           <img
-            src="https://images.pexels.com/photos/19836380/pexels-photo-19836380/free-photo-of-lichtspiel-mit-architektonischem-gebaude.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Static image URL
-            alt="Terrace Garden"
-            className="object-cover hidden lg:block w-full h-[300px] lg:h-[900px]"
+            src={expandedPlanImage}
+            alt="Expanded Plan"
+            className="absolute top-0 lg:top-[calc(4rem+2px)] object-cover w-full lg:h-[calc(100%-4rem)] border-b-2 border-gray-800"
+            style={{
+              left: 0,
+              right: 0,
+              bottom: 0,
+            }}
           />
-        )}
+        )
+        :
+        (
+          <img
+          src={'https://images.pexels.com/photos/10898449/pexels-photo-10898449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}
+          alt="Expanded Plan"
+          className="absolute top-0 lg:top-[calc(4rem+2px)] object-cover w-full lg:h-[calc(100%-4rem)] border-b-2 border-gray-800"
+          style={{
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+          />
+
+        )
+      
+      }
       </div>
     </div>
   );

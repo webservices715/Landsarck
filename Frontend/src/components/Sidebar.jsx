@@ -11,7 +11,7 @@ import { FaGoogle } from "react-icons/fa";
 const icons = [
   { id: 1, icon: IoCallSharp, link: "tel:+" },
   { id: 2, icon: FaWhatsapp, link: "https://" },
-  { id: 3, icon: IoMail, link: "mailto:dr." },
+  { id: 3, icon: IoMail, link: "mailto:info@landsarck.com" },
   { id: 4, icon: FaInstagram, link: "mailto:dr." },
   { id: 5, icon: FaFacebookF, link: "mailto:dr." },
   { id: 6, icon: FaLinkedinIn, link: "mailto:dr." },

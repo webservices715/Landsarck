@@ -36,7 +36,7 @@ function Footer() {
                 href="mailto:email@example.com"
                 className="border-b border-gray-900 font-bitter"
               >
-                email@example.com
+                info@landsarck.com
               </a>
               <br />
               (555) 555-5555

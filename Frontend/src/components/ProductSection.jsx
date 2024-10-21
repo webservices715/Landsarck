@@ -32,7 +32,7 @@ const ProductSection = () => {
         <h2 className="text-[32px] sm:text-[40px] md:text-[50px] font-young-serif">Featured Products</h2>
         {/* Large screens pe dikhaye */}
         <button className="hidden md:block px-12 py-4 sm:px-16 sm:py-5 md:px-20 md:py-6 font-bitter border border-black rounded-full hover:bg-black hover:text-white transition">
-        Explore more button
+        Explore more 
 
         </button>
       </div>
@@ -59,7 +59,7 @@ const ProductSection = () => {
       {/* Small screens pe button ko last me dikhaye */}
       <div className="mt-8 md:hidden flex justify-center">
         <button className="px-28 py-4 sm:px-40 sm:py-5 md:px-20 md:py-6 font-bitter border border-black rounded-full hover:bg-black hover:text-white transition">
-        Explore more button
+        Explore more 
         </button>
       </div>
     </div>

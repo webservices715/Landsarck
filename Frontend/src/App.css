@@ -7,49 +7,8 @@
   }
 
   
-  .marquee {
-    display: flex;
-    animation: marquee 10s linear infinite; 
-  }
   
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
   
-  .Marquee-svg {
-    width: 100%;
-    height: auto;
-  }
-  
-  .Marquee-path-group {
-    animation: waveAnimation 15s ease-in-out infinite;
-  }
-  
-  @keyframes waveAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  .Marquee-svg-text {
-    font-size: 8rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
 
 
   

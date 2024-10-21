@@ -27,24 +27,23 @@ const services = [
 
 const GardenShop = () => {
   return (
-    <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-16">
+    <div className="w-full bg-gray-50 px-4 lg:px-16 mx-auto py-16 flex flex-col items-center">
       <div className="flex flex-col justify-center items-center mb-8">
         <a
           href="#"
-          className="bg-zinc-900 text-white text-base sm:text-lg font-bitter px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
+          className="bg-gray-300 text-black text-base font-bold sm:text-lg font-bitter px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-primary-dark transition-all"
         >
           One-stop shop for all Garden things
         </a>
-        {/* One-line description below main heading */}
         <p className="text-gray-600 mt-4 text-sm sm:text-base lg:text-lg text-center">
           We provide everything you need to create and maintain the perfect garden.
         </p>
       </div>
 
       {/* Services Section */}
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-6 text-center lg:text-left">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-6 text-center">
         {services.map((service) => (
-          <div key={service.id} className="flex border flex-col items-center lg:items-start overflow-hidden pb-6">
+          <div key={service.id} className="flex border flex-col items-center overflow-hidden pb-6 max-w-sm mx-auto">
             <div className="w-full h-[320px] sm:h-[220px] md:h-[300px] lg:h-[380px] overflow-hidden rounded-2xl">
               <img
                 src={service.image}
@@ -52,7 +51,7 @@ const GardenShop = () => {
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-            <div className="py-6 px-2">
+            <div className="py-6 px-4 flex flex-col items-center">
               <h4 className="text-xl h-[4rem] sm:text-xl md:text-2xl mb-4 font-young-serif">{service.title}</h4>
               <p className="text-base sm:text-lg md:text-lg font-bitter mb-8">{service.description}</p>
               <a

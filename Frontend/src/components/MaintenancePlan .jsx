@@ -61,7 +61,7 @@ const MaintenancePlan = () => {
                 
                 onClick={() => handlePlanClick('Basic Plan - 3 Months')}
               >
-                3 Months - ₹99
+                3 Months - ₹999
               </span>
               <span
                 className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
@@ -69,7 +69,7 @@ const MaintenancePlan = () => {
                 
                 onClick={() => handlePlanClick('Basic Plan - 6 Months')}
               >
-                6 Months - ₹179
+                6 Months - ₹1799
               </span>
               <span
                 className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
@@ -77,7 +77,7 @@ const MaintenancePlan = () => {
                 
                 onClick={() => handlePlanClick('Basic Plan - 12 Months')}
               >
-                12 Months - ₹299
+                12 Months - ₹2999
               </span>
             </div>
           </div>
@@ -101,17 +101,17 @@ const MaintenancePlan = () => {
               "
               onClick={() => handlePlanClick('Standard Plan - 3 Months')}
               
-              >3 Months - ₹149</span>
+              >3 Months - ₹1499</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
               onClick={() => handlePlanClick('Standard Plan - 6 Months')}
               
-              >6 Months - ₹249</span>
+              >6 Months - ₹2499</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
               onClick={() => handlePlanClick('Standard Plan - 12 Months')}
               
-              >12 Months - ₹399</span>
+              >12 Months - ₹3999</span>
             </div>
           </div>
         </div>
@@ -137,17 +137,17 @@ const MaintenancePlan = () => {
               "
               onClick={() => handlePlanClick('Premium Plan - 3 Months')}
              
-             >3 Months - ₹199</span>
+             >3 Months - ₹1999</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
               onClick={() => handlePlanClick('Premium Plan - 6 Months')}
               
-              >6 Months - ₹349</span>
+              >6 Months - ₹3499</span>
               <span className="block py-3 px-6 bg-gray-100 rounded text-lg text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300
               "
               onClick={() => handlePlanClick('Premium Plan - 12 Months')}
               
-              >12 Months - ₹499</span>
+              >12 Months - ₹4999</span>
             </div>
           </div>
         </div>

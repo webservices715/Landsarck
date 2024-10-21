@@ -203,7 +203,7 @@ const Header = () => {
               onMouseEnter={() => setIsAddMoreDropdownOpen(true)}
               onMouseLeave={() => setIsAddMoreDropdownOpen(false)}
             >
-              <button className="hover:text-gray-300">Add</button>
+              <button className="hover:text-gray-300">More</button>
               <div
                 className={`dropdown-menu ${
                   isAddMoreDropdownOpen ? "show" : ""
@@ -378,7 +378,7 @@ const Header = () => {
               onClick={() => setIsMobileAddMoreOpen(!isMobileAddMoreOpen)}
               className="w-full text-left"
             >
-              Add More
+               More
             </button>
             {isMobileAddMoreOpen && (
               <div className="ml-4  space-y-5 p-3 bg-gray-50">

@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturesSection = () => {
   return (
-    <div className="bg-[#dcdcdc] py-20 md:px-5 px-2 w-full">
+    <div className="bg-[#f4f4f4] py-20 md:px-5 px-2 w-full">
       <div className="flex flex-col md:flex-row justify-around items-center ">
         <div className="flex flex-col items-center text-center mx-5 my-5">
           <div className="mb-3">
@@ -70,7 +70,7 @@ const FeaturesSection = () => {
       </div>
 
       <div className="flex justify-center mt-8">
-        <button className="px-6 py-3 border border-black hover:bg-black transition-all ease-out duration-300 text-black hover:text-white font-bitter font-semibold rounded">
+        <button className="px-6 py-4 border border-black hover:bg-black transition-all ease-out duration-300 text-black hover:text-white font-bitter font-semibold rounded">
           Book Free Design Session
         </button>
       </div>

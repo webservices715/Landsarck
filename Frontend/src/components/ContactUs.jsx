@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#dcdcdc] lg:px-6 lg:py-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#f4f4f4]  lg:px-6 lg:py-6">
       {/* Large centered heading */}
       <h1 className="text-[4rem] md:text-[8rem] lg:text-[15rem] text-black mb-8 lg:text-center  font-young-serif">Contact Us</h1>
 

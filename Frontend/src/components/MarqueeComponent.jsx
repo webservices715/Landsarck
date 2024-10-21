@@ -19,7 +19,7 @@ const MarqueeComponent = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center lg:py-28 py-24 bg-[#dcdcdc]">
+    <div className="flex items-center justify-center lg:py-28 py-24 bg-[#f4f4f4] ">
       <svg
         version="1.1"
         id="Layer_1"

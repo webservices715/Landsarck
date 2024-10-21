@@ -26,7 +26,7 @@ const Sidebar = () => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-100 text-black md:w-14 md:h-14 w-10 h-10 flex items-center justify-center md:rounded-xl rounded-lg shadow-lg hover:bg-black hover:text-white transition ease-in-out delay-100"
+          className="bg-gray-100 text-black md:w-14 md:h-14 w-12 h-12 flex items-center justify-center md:rounded-xl rounded-lg shadow-lg hover:bg-black hover:text-white transition ease-in-out delay-100"
         >
           <Icon className="md:text-2xl text-xl" />
         </a>

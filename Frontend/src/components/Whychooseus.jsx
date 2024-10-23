@@ -84,7 +84,7 @@ import React from 'react';
          {features.map((feature, index) => (
            <div key={index} className="p-4">
              <div className="p-2 text-center">
-               <div className="h-24 mx-auto mb-6 border h-24 w-24 rounded-full flex items-center justify-center" >{feature.icon} </div>
+               <div className="mx-auto mb-6 border h-24 w-24 rounded-full flex items-center justify-center" >{feature.icon} </div>
                <h3 className="text-xl font-bitter">{feature.title}</h3>
              </div>
            </div>

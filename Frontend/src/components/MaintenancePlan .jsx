@@ -39,9 +39,9 @@ import React, { useState } from 'react';
        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full">
          {/* Plan 1: Basic Garden Maintenance Service */}
          <div className="h-auto lg:h-[650px] flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500">
-           <h2 className="text-3xl font-young-serif mb-4 text-gray-800">Basic Garden Maintenance Service</h2>
-           <p className="text-lg mb-8 text-gray-600 text-center">
-             Up to 500 Sq.ft. garden care.
+           <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">Basic Garden Maintenance Service</h2>
+           <p className="text-lg mb-8 text-gray-600 text-center underline">
+             Up to 500 Sq.ft.
            </p>
            <ul className="space-y-2 text-gray-600 text-center mb-8">
              <li>✓ Lawn mowing</li>
@@ -76,9 +76,9 @@ import React, { useState } from 'react';
  
          {/* Plan 2: Standard Garden Maintenance Service */}
          <div className="h-auto lg:h-[650px] flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500">
-           <h2 className="text-3xl font-young-serif mb-4 text-gray-800">Standard Garden Maintenance Service</h2>
-           <p className="text-lg mb-8 text-gray-600 text-center">
-             Up to 1000 Sq.ft. garden care.
+           <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">Standard Garden Maintenance Service</h2>
+           <p className="text-lg mb-8 text-gray-600 text-center underline">
+             Up to 1000 Sq.ft.
            </p>
            <ul className="space-y-2 text-gray-600 text-center mb-8">
              <li>✓ Everything in Basic Service</li>
@@ -116,9 +116,9 @@ import React, { useState } from 'react';
            <div className="absolute -top-16 lg:-top-16 -right-1 bg-black text-white px-6 py-10 rounded-full font-bitter text-lg">
              Popular
            </div>
-           <h2 className="text-3xl font-young-serif mb-4 text-gray-800">Premium Garden Maintenance Service</h2>
-           <p className="text-lg mb-8 text-gray-600 text-center">
-             Up to 1500 Sq.ft. comprehensive garden care.
+           <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">Premium Garden Maintenance Service</h2>
+           <p className="text-lg mb-8 text-gray-600 text-center underline">
+             Up to 1500 Sq.ft. 
            </p>
            <ul className="space-y-2 text-gray-600 text-center mb-8">
              <li>✓ Everything in Standard Service</li>

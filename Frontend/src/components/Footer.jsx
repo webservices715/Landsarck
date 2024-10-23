@@ -19,11 +19,12 @@ function Footer() {
             <h4 className="text-3xl lg:mt-0 mt-8 mb-8 font-young-serif">
               Location
             </h4>
-            <p className="text-xl font-bitter">
-              123 Demo Street
-              <br />
-              New York, NY 12345
-            </p>
+            <div className="space-y-3">
+              <p className="text-xl font-bitter">Corporate office :- Mumbai</p>
+              <p className="text-xl font-bitter">Head office:- Bengaluru</p>
+              <p className="text-xl font-bitter">Registered office:- Jaipur</p>
+              <p className="text-xl font-bitter">Satellite office: Delhi</p>
+            </div>
           </div>
 
           {/* Contact (3rd column) */}

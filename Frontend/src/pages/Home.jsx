@@ -11,6 +11,7 @@ import ProductSection from "../components/ProductSection";
 import Sidebar from "../components/Sidebar";
 import TerraceGardenPlan from "../components/TerraceGardenPlan";
 import Whychooseus from "../components/Whychooseus";
+import HowWeWorks from "../components/HowWeWork";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Hero />
       <Whychooseus />
       <GardenShop />
+      <HowWeWorks/>
       <TerraceGardenPlan />
       <ProductSection />
       <AppointmentScheduler />

@@ -14,10 +14,16 @@ import React, { useState } from 'react';
    });
  
    const serviceOptions = [
-     { title: 'Free Consultation', time: '30 minutes', price: 'Free' },
-     { title: 'Basic Service', time: '1 hour', price: '$99.00' },
-     { title: 'Advanced Service', time: '1 hour', price: '$199.00' },
-   ];
+    { title: 'Free Consultation', time: '30 minutes', price: 'Free' },
+    { title: 'Basic Service', time: '1 hour', price: '₹99.00' },
+    { title: 'Advanced Service', time: '1 hour', price: '₹199.00' },
+    { title: 'Free Consultation - Landscape Architect & Designers', time: '30 minutes', price: 'Free' },
+    { title: 'Basic Consultation', time: '30 minutes', price: '₹699.00', description: 'Direct meet with landscape architect & designers' },
+    { title: 'Advanced Consultation', time: '1 hour', price: '₹1199.00', description: 'Direct meet with landscape architect & designers' },
+    { title: 'Expert Consultation', time: '3 hours', price: '₹2999.00', description: 'Direct meet with architect & designers' },
+    { title: 'Specialized Consultation', time: '3 hours', price: '₹10999.00', description: 'Direct meet with award-winning, gold-medalist architect' },
+  ];
+  
  
    const handlePlanSelect = (plan) => {
      setSelectedPlan(plan);
@@ -98,14 +104,14 @@ import React, { useState } from 'react';
            ))}
          </div>
  
-         <div className={`transition-all duration-500 overflow-hidden ${selectedPlan ? 'max-h-screen' : 'max-h-0'}`}>
+         <div className={`transition-all duration-500 overflow-hidden ₹{selectedPlan ? 'max-h-screen' : 'max-h-0'}`}>
            {selectedPlan && !timeSelected && (
              <div className="mt-10">
                <h2 className="text-xl font-semibold font-young-serif mb-4">Select a Time</h2>
                <div className="flex justify-between items-center mt-4">
                  <button
                    onClick={getPrevDays}
-                   className={`flex items-center px-4 py-2 rounded-md ${currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '}`}
+                   className={`flex items-center px-4 py-2 rounded-md ₹{currentDayIndex === 0 ? 'text-gray-400 cursor-not-allowed' : 'text-gray-900 '}`}
                    disabled={currentDayIndex === 0}
                  >
                    <FiChevronLeft className="mr-2" />
@@ -145,7 +151,7 @@ import React, { useState } from 'react';
            )}
          </div>
  
-         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${timeSelected ? 'max-h-screen' : 'max-h-15'}`}>
+         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ₹{timeSelected ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>2</div>
              <h2 className="text-2xl font-medium font-young-serif mb-6">Your Information</h2>
@@ -183,7 +189,7 @@ import React, { useState } from 'react';
            )}
          </div>
  
-         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ${formSubmitted ? 'max-h-screen' : 'max-h-15'}`}>
+         <div className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ₹{formSubmitted ? 'max-h-screen' : 'max-h-15'}`}>
            <div className='flex gap-2'>
              <div className='rounded-[150%] w-10 h-10 bg-black text-white text-center font-bold p-2'>3</div>
              <h2 className="text-2xl font-medium font-young-serif mb-6">Confirm Appointment</h2>
@@ -193,7 +199,7 @@ import React, { useState } from 'react';
                <p className="mb-4"><strong>Plan:</strong> {selectedPlan}</p>
                <p className="mb-4">
                  <strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
-                   <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
+                   <span key={date}>{`₹{getDateString(new Date(date))} at ₹{time}`}</span>
                  ))}
                </p>
                <p className="mb-4"><strong>Name:</strong> {formData.fullName}</p>
@@ -237,7 +243,7 @@ import React, { useState } from 'react';
  const TimeSlot = ({ time, isSelected, onSelect }) => {
    return (
      <div
-       className={`px-4 py-2 border rounded-md cursor-pointer ${isSelected ? 'bg-black text-white' : 'bg-white text-gray-800'}`}
+       className={`px-4 py-2 border rounded-md cursor-pointer ₹{isSelected ? 'bg-black text-white' : 'bg-white text-gray-800'}`}
        onClick={onSelect}
      >
        {time}

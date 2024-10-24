@@ -7,7 +7,7 @@ const HowWeWorks = () => {
   const stepsRow1 = [
     { text: "Fill Form", icon: <FaClipboardList /> },
     { text: "Get a Call", icon: <FaPhone /> },
-    { text: "Share Your Floor Plan", icon: <FaShareAlt /> },
+    { text: "Share Your Plan", icon: <FaShareAlt /> },
     { text: "Speak to Your Designer", icon: <FaUser />, downIcon: <AiOutlineArrowDown /> },
   ];
 
@@ -15,7 +15,7 @@ const HowWeWorks = () => {
     { text: 'Design Proposal', icon: <FaClipboardList /> },
     { text: "Visit an Experience Center", icon: <FaBuilding /> },
     { text: "Revised Quote", icon: <FaFileAlt /> },
-    { text: "Book with Us", icon: <FaCheckCircle /> },
+    { text: "Book Site Visit", icon: <FaCheckCircle /> },
   ];
 
   // Mobile specific steps order (after Speak to Designer, Design Proposal)

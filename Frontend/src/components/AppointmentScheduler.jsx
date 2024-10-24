@@ -14,14 +14,11 @@ import React, { useState } from 'react';
    });
  
    const serviceOptions = [
-    { title: 'Free Consultation', time: '30 minutes', price: 'Free' },
-    { title: 'Basic Service', time: '1 hour', price: '₹99.00' },
-    { title: 'Advanced Service', time: '1 hour', price: '₹199.00' },
-    { title: 'Free Consultation - Landscape Architect & Designers', time: '30 minutes', price: 'Free' },
-    { title: 'Basic Consultation', time: '30 minutes', price: '₹699.00', description: 'Direct meet with landscape architect & designers' },
-    { title: 'Advanced Consultation', time: '1 hour', price: '₹1199.00', description: 'Direct meet with landscape architect & designers' },
-    { title: 'Expert Consultation', time: '3 hours', price: '₹2999.00', description: 'Direct meet with architect & designers' },
-    { title: 'Specialized Consultation', time: '3 hours', price: '₹10999.00', description: 'Direct meet with award-winning, gold-medalist architect' },
+    { title: 'Free Consultation -  Landscape architect & Designers ', time: '30 minutes', price: 'Free' },
+    { title: 'Basic Service - Direct meet with Landscape Architect & Designers', time: '1 hour', price: '₹699' },
+    { title: 'Advanced Service - Direct meet with Landscape Architect & Designers', time: '1 hour', price: '₹1199' },
+    { title: 'Expert Consultation - Direct meet with Architect & Designers', time: '3 hours', price: '₹2999.00', description: '' },
+    { title: 'Specialized Consultation - Direct meet with Award-Winning, Gold-Medalist Architect', time: '3 hours', price: '₹10999.00', description: '' },
   ];
   
  

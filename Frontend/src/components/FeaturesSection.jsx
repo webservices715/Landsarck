@@ -8,12 +8,12 @@ const FeaturesSection = () => {
           <div className="mb-3">
             {/* Icon for 10 year warranty */}
             <img
-              src="https://cdn-icons-png.freepik.com/256/6755/6755750.png?uid=R202666407&ga=GA1.1.1819474253.1716626039&semt=ais_hybrid"
+              src="https://cdn-icons-png.freepik.com/256/11945/11945704.png?ga=GA1.1.1819474253.1716626039&semt=ais_hybrid"
               alt="Warranty Icon"
               className="w-20 h-20"
             />
           </div>
-          <h3 className="text-xl font-young-serif">Flat 10 year warranty</h3>
+          <h3 className="text-xl font-young-serif">Flat 5 year warranty</h3>
           <p className="text-gray-600 font-bitter mt-2">
             Choose interiors designed with superior quality material, leaving no
             room for defects.
@@ -45,7 +45,7 @@ const FeaturesSection = () => {
               className="w-20 h-20"
             />
           </div>
-          <h3 className="text-xl font-young-serif">600+ design experts</h3>
+          <h3 className="text-xl font-young-serif">50+ design experts</h3>
           <p className="text-gray-600 font-bitter mt-2">
             Explore design ideas and co-create your dream home with our
             experienced designers.

@@ -15,7 +15,7 @@ import React, { useState } from 'react';
  
    const serviceOptions = [
     { title: 'Free Consultation -  Online Landscape architect & Designer', time: '30 minutes', price: 'Free' },
-    { title: 'Basic consultation - Direct meet with Landscape Filed Expert', time: '1 hour', price: '₹699' },
+    { title: 'Basic consultation - Direct meet with Landscape Filed Expert', time: '30 minutes', price: '₹699' },
     { title: 'Advanced consultation - Direct meet with Landscape Filed Expert', time: '1 hour', price: '₹1199' },
     { title: 'Expert Consultation - Direct meet with Filed Expert', time: '3 hours', price: '₹2999.00', description: '' },
     { title: 'Specialized Consultation - Direct meet with Award-Winning, Gold-Medalist Architect', time: '3 hours', price: '₹10999.00', description: '' },

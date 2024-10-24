@@ -15,8 +15,8 @@ import React, { useState } from 'react';
  
    const serviceOptions = [
     { title: 'Free Consultation -  Online Landscape architect & Designer', time: '30 minutes', price: 'Free' },
-    { title: 'Basic consultation - Direct meet with Landscape Filed Expert', time: '30 minutes', price: '₹699' },
-    { title: 'Advanced consultation - Direct meet with Landscape Filed Expert', time: '1 hour', price: '₹1199' },
+    { title: 'Basic consultation - Direct meet with  Filed Expert', time: '30 minutes', price: '₹699' },
+    { title: 'Advanced consultation - Direct meet with  Filed Expert', time: '1 hour', price: '₹1199' },
     { title: 'Expert Consultation - Direct meet with Filed Expert', time: '3 hours', price: '₹2999.00', description: '' },
     { title: 'Specialized Consultation - Direct meet with Award-Winning, Gold-Medalist Architect', time: '3 hours', price: '₹10999.00', description: '' },
   ];
@@ -195,10 +195,11 @@ import React, { useState } from 'react';
              <div>
                <p className="mb-4"><strong>Plan:</strong> {selectedPlan}</p>
                <p className="mb-4">
-                 <strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
-                   <span key={date}>{`₹{getDateString(new Date(date))} at ₹{time}`}</span>
-                 ))}
-               </p>
+  <strong>Time:</strong> {Object.entries(selectedTimes).map(([date, time]) => (
+    <span key={date}>{`${getDateString(new Date(date))} at ${time}`}</span>
+  ))}
+</p>
+
                <p className="mb-4"><strong>Name:</strong> {formData.fullName}</p>
                <p className="mb-4"><strong>Email:</strong> {formData.email}</p>
                <p className="mb-4"><strong>Phone:</strong> {formData.phone}</p>
@@ -222,12 +223,12 @@ import React, { useState } from 'react';
        className={`p-6 rounded-lg shadow-md cursor-pointer bg-white bg-opacity-80 text-gray-800 flex justify-between`}
      >
        <div>
-         <h3 className="text-lg font-semibold font-young-serif">{title}</h3>
+         <h3 className="text-lg w-[98%] font-semibold font-young-serif">{title}</h3>
          <p className='font-bitter'>{time}</p>
          <p className="font-bold font-bitter">{price}</p>
        </div>
        <button
-         className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-24 font-bitter"
+         className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-32 font-bitter"
          onClick={onSelect}
        >
          Book Now

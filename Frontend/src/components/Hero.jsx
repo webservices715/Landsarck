@@ -3,25 +3,25 @@ import React, { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Transform Your Outdoor Space with Expert Landscape Design",
+    title: "Designing serene rooftop escapes, tailored to your unique vision",
     description:
-      "Discover the art of exceptional landscape design, where every element is meticulously tailored to enhance both beauty and function. Our experts transform outdoor spaces into stunning sanctuaries that reflect your vision and lifestyle.",
+      "We specialize in designing serene rooftop escapes, perfectly tailored to your unique vision, Our expert team transforms terraces into personalized, tranquil retreats that inspire relaxation and beauty.",
     imageUrl:
       "https://images.unsplash.com/photo-1509600110300-21b9d5fedeb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
-    title: "Create Your Dream Garden Oasis",
+    title: "Transform Your Outdoor Space with Expert",
     description:
-      "Let us design a garden that not only beautifies your home but also brings you peace and relaxation. Our custom gardens are crafted to fit your lifestyle and preferences.",
+      " Transform your outdoor space into a stunning retreat with expert landscape design, blending functionality and beauty to create the perfect environment for relaxation and enjoyment. ",
     imageUrl:
       "https://images.pexels.com/photos/29014368/pexels-photo-29014368/free-photo-of-remote-house-in-icelandic-landscape-under-dark-sky.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 3,
-    title: "Elevate Your Outdoor Living Experience",
+    title: "Create Your Dream Garden Oasis",
     description:
-      "Transform your backyard into a stunning outdoor living space, perfect for entertaining or simply relaxing. Our designs prioritize functionality and aesthetics to create the ideal environment.",
+      "Create your dream garden oasis with personalized landscape designs that transform your terrace into a serene retreat, blending nature’s beauty with luxury for ultimate relaxation.",
     imageUrl:
       "https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },

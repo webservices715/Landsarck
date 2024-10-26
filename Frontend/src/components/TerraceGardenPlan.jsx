@@ -46,10 +46,10 @@ import React, { useState } from 'react';
            Choose Terrace Garden Construction Plan
          </h1>
          <p className="text-left text-base md:text-lg text-gray-900 mb-12 md:mb-16 font-bitter">
-           Our team of skilled landscape designers transforms outdoor spaces into
-           stunning environments that blend beauty and functionality. With a
-           commitment to excellence, we offer customized solutions to suit your
-           unique landscape vision.
+         Choose from our three terrace garden construction plans: Basic for essential greenery and Lawn, Premium for
+enhanced design with diverse plants, pool and features, and Luxury for an opulent space complete with bespoke
+landscaping, lighting, Trees, Gazebo and high-end materials, tailored to your lifestyle.
+
          </p>
  
          {/* Border line before Basic Plan */}

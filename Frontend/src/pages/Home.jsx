@@ -27,10 +27,10 @@ function Home() {
       <AppointmentScheduler />
       <MaintenancePlan />
       <AboutUs />
-      <Location/>
       {/* <MarqueeComponent /> */}
       <ContactUs />
       <FeaturesSection />
+      <Location/>
     </div>
   );
 }

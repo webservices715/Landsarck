@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar";
 import TerraceGardenPlan from "../components/TerraceGardenPlan";
 import Whychooseus from "../components/Whychooseus";
 import HowWeWorks from "../components/HowWeWork";
+import Location from "../components/Location";
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
       <AppointmentScheduler />
       <MaintenancePlan />
       <AboutUs />
+      <Location/>
       {/* <MarqueeComponent /> */}
       <ContactUs />
       <FeaturesSection />

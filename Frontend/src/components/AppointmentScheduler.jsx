@@ -223,12 +223,12 @@ import React, { useState } from 'react';
        className={`p-6 rounded-lg shadow-md cursor-pointer bg-white bg-opacity-80 text-gray-800 flex justify-between`}
      >
        <div>
-         <h3 className="text-lg w-[98%] font-semibold font-young-serif">{title}</h3>
+         <h3 className="text-sm w-[98%] font-semibold font-young-serif md:text-lg">{title}</h3>
          <p className='font-bitter'>{time}</p>
          <p className="font-bold font-bitter">{price}</p>
        </div>
        <button
-         className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-32 font-bitter"
+         className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-32 font-bitter text-[8px] md:text-lg "
          onClick={onSelect}
        >
          Book Now

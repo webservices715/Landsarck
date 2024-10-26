@@ -21,11 +21,11 @@ const Location = () => {
   return (
     <div className="bg-[#4d3a4b] text-[#ffffff99] py-10 px-4">
       {professions.map((profession, idx) => (
-        <div key={idx} className="mb-8">
-          <h2 className="text-lg font-semibold text-white mb-4">{profession} Locations</h2>
+        <div key={idx} className="mb-8 font-young-serif">
+          <h2 className="text-lg font-medium text-white mb-4">{profession} Locations</h2>
           <div className="flex flex-wrap gap-4">
             {cities.map((city, index) => (
-              <p key={index} className="text-sm">
+              <p key={index} className="text-sm font-bitter">
                 {`${profession} in ${city}`}
               </p>
             ))}

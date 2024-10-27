@@ -126,8 +126,9 @@ const MaintenancePlan = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-between  px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
+            className="flex flex-col items-center  px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
           >
+            <div>
             <h2 className="text-2xl font-young-serif mb-4 text-gray-800 text-center">
               {plan.name}
             </h2>
@@ -142,8 +143,10 @@ const MaintenancePlan = () => {
                 Frequency : {plan.frequency}
               </li>
             </ul>
+            </div>
+            <div className="w-full h-[100%] flex flex-col justify-end">
             <div className="w-full border-t-2 border-gray-200 pt-6">
-              <h3 className="text-xl font-young-serif mb-4 text-gray-800">
+              <h3 className="text-xl font-young-serif mb-4 text-gray-800 pl-4">
                 Plans Available:
               </h3>
               <div className="flex flex-col items-center space-y-4">
@@ -159,6 +162,7 @@ const MaintenancePlan = () => {
                   </span>
                 ))}
               </div>
+            </div>
             </div>
           </div>
         ))}

@@ -22,7 +22,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Garden RENOVATIONS",
+    title: "GARDEN RENOVATIONS",
     description:
       "Transform your outdoor space with Landsarck's garden renovation services. We specialize in revitalizing gardens, enhancing aesthetics, and creating vibrant landscapes tailored to your vision for a beautiful outdoor retreat.",
     image:

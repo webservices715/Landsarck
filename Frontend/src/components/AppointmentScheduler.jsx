@@ -15,22 +15,22 @@ const AppointmentScheduler = () => {
 
   const serviceOptions = [
     {
-      title: "Free Consultation -  Online Landscape architect & Designer",
+      title: "Free Consultation - Direct Online Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "30 minutes",
       price: "Free",
     },
     {
-      title: "Basic consultation - Direct meet with Landscape Filed Expert",
+      title: "Basic consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "30 minutes",
       price: "₹699",
     },
     {
-      title: "Advanced consultation - Direct meet with Landscape Filed Expert",
+      title: "Advanced consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "1 hour",
       price: "₹1199",
     },
     {
-      title: "Expert Consultation - Direct meet with Landscape Filed Expert",
+      title: "Expert Consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "3 hours",
       price: "₹2999.00",
       description: "",

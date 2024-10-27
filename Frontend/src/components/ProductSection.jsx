@@ -49,7 +49,7 @@ const ProductSection = () => {
               className="h-[300px] sm:h-[400px] md:h-[500px] object-cover"
             />
             <div className="py-4">
-              <h3 className="text-[18px] sm:text-[22px] md:text-[26px] font-young-serif">{product.title}</h3>
+              <h3 className="text-[18px] sm:text-[22px] md:text-[26px] font-young-serif text-center">{product.title}</h3>
               <div className="flex items-center justify-between mt-4 sm:mt-6 md:mt-8">
                 <p className="text-gray-800 font-bitter">Starting from {product.price}/-</p>
                 <button className="ml-3 px-4 py-3 font-bitter border border-black text-black rounded-md hover:bg-black  hover:text-white transition-all ease-in-out duration-300">

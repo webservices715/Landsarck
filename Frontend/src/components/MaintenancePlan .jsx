@@ -124,7 +124,7 @@ const MaintenancePlan = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex flex-col items-center  px-2  bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
+            className="flex flex-col items-center  px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
           >
             <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">{plan.name}</h2>
             <p className="text-lg my-8 text-gray-600 text-center underline">{plan.area}</p>

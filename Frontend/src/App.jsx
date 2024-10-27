@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import PopupForm from './components/PopupForm'
 import Home from './pages/Home'
+import Location from './components/Location'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+      <Location/>
       </div>
 
     </Router>

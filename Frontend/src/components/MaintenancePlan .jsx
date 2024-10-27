@@ -124,11 +124,11 @@ const MaintenancePlan = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-between p-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
+            className="flex flex-col items-center  px-2  bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
           >
             <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">{plan.name}</h2>
-            <p className="text-lg mb-8 text-gray-600 text-center underline">{plan.area}</p>
-            <ul className="space-y-2 text-gray-600 text-center mb-8 text-sm font-semibold">
+            <p className="text-lg my-8 text-gray-600 text-center underline">{plan.area}</p>
+            <ul className="space-y-4 ml-2 text-gray-600  mb-8 text-sm font-semibold">
               {plan.services.map((service, idx) => (
                 <li key={idx}>✓ {service}</li>
               ))}

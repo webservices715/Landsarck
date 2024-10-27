@@ -25,7 +25,7 @@ const Location = () => {
           <h2 className="text-lg font-medium text-white mb-4">{profession} Locations</h2>
           <div className="flex flex-wrap gap-4">
             {cities.map((city, index) => (
-              <p key={index} className="text-sm font-bitter">
+              <p key={index} className="text-[12px] font-bitter">
                 {`${profession} in ${city}`}
               </p>
             ))}

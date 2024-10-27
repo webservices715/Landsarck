@@ -15,22 +15,26 @@ const AppointmentScheduler = () => {
 
   const serviceOptions = [
     {
-      title: "Free Consultation - Direct Online Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
+      title:
+        "Free Consultation - Direct Online Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "30 minutes",
       price: "Free",
     },
     {
-      title: "Basic consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
+      title:
+        "Basic Consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "30 minutes",
       price: "₹699",
     },
     {
-      title: "Advanced consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
+      title:
+        "Advanced Consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "1 hour",
       price: "₹1199",
     },
     {
-      title: "Expert Consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
+      title:
+        "Expert Consultation - Direct Meet with Landsarck Field Expert (Landsacpe, Architect, Designer, Horticulrist, Agriculture Expert and more)",
       time: "3 hours",
       price: "₹2999.00",
       description: "",
@@ -309,21 +313,23 @@ const AppointmentScheduler = () => {
 const ServiceOption = ({ title, time, price, onSelect, isSelected }) => {
   return (
     <div
-      className={`p-6 rounded-lg shadow-md cursor-pointer bg-white bg-opacity-80 text-gray-800 flex justify-between`}
+      className={`p-6 rounded-lg shadow-md cursor-pointer bg-white bg-opacity-80 text-gray-800 flex w-full `}
     >
-      <div>
-        <h3 className="text-sm w-[98%] font-semibold font-young-serif md:text-lg">
-          {title}
-        </h3>
-        <p className="font-bitter">{time}</p>
-        <p className="font-bold font-bitter">{price}</p>
+      <div className="w-[100%] md:flex">
+        <div className="w-[85%] flex justify-start flex-col">
+          <h3 className=" font-mediam font-young-serif text-sm">{title}</h3>
+          <p className="font-bitter">{time}</p>
+          <p className="font-bold font-bitter">{price}</p>
+        </div>
+        <div className="md:w-[15%]">
+          <button
+            className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-full font-bitter text-[8px] md:text-sm "
+            onClick={onSelect}
+          >
+            Book Now
+          </button>
+        </div>
       </div>
-      <button
-        className="bg-black text-white px-2 py-2 rounded-md mt-4 h-10 w-32 font-bitter text-[8px] md:text-lg "
-        onClick={onSelect}
-      >
-        Book Now
-      </button>
     </div>
   );
 };

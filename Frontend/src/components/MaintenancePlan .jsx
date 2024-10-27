@@ -1,95 +1,95 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const MaintenancePlan = () => {
-  const [selectedPlan, setSelectedPlan] = useState('');
+  const [selectedPlan, setSelectedPlan] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    name: "",
+    email: "",
+    phone: "",
   });
 
   const plans = [
     {
-      name: 'Basic Garden Maintenance Service',
-      area: 'Up to 500 Sq.ft.',
-      frequency: '15 Days',
+      name: "Basic Garden Maintenance Service",
+      area: "Up to 500 Sq.ft.",
+      frequency: "15 Days",
       services: [
-        'Lawn mowing',
-        'Basic weeding',
-        'Leaf-blowing and debris removal',
-        'Hedge trimming (once a month)',
-        'Watering of plants (if no irrigation system exists)',
-        'Basic garden bed cleaning',
+        "Lawn mowing",
+        "Basic weeding",
+        "Leaf-blowing and debris removal",
+        "Hedge trimming (once a month)",
+        "Watering of plants (if no irrigation system exists)",
+        "Basic garden bed cleaning",
       ],
       prices: [
-        { duration: '3 Months', price: '₹999' },
-        { duration: '6 Months', price: '₹1799' },
-        { duration: '12 Months', price: '₹2999' },
+        { duration: "3 Months", price: "₹999" },
+        { duration: "6 Months", price: "₹1799" },
+        { duration: "12 Months", price: "₹2999" },
       ],
     },
     {
-      name: 'Standard Garden Maintenance Service',
-      area: 'Up to 1000 Sq.ft.',
-      frequency: '15 Days',
+      name: "Standard Garden Maintenance Service",
+      area: "Up to 1000 Sq.ft.",
+      frequency: "15 Days",
       services: [
-        'Everything in Basic Service',
-        'Fertilizing lawns and plants',
-        'Seasonal planting and flower bed refresh',
-        'Pruning of trees and shrubs',
-        'Mulching garden beds',
-        'Lawn edging',
-        'Pest control (basic)',
-        'Irrigation system check and minor repairs',
-        'Disease management for plants',
+        "Everything in Basic Service",
+        "Fertilizing lawns and plants",
+        "Seasonal planting and flower bed refresh",
+        "Pruning of trees and shrubs",
+        "Mulching garden beds",
+        "Lawn edging",
+        "Pest control (basic)",
+        "Irrigation system check and minor repairs",
+        "Disease management for plants",
       ],
       prices: [
-        { duration: '3 Months', price: '₹1499' },
-        { duration: '6 Months', price: '₹2499' },
-        { duration: '12 Months', price: '₹3999' },
+        { duration: "3 Months", price: "₹1499" },
+        { duration: "6 Months", price: "₹2499" },
+        { duration: "12 Months", price: "₹3999" },
       ],
     },
     {
-      name: 'Premium Garden Maintenance Service',
-      area: 'Up to 1500 Sq.ft.',
-      frequency: '15 Days',
+      name: "Premium Garden Maintenance Service",
+      area: "Up to 1500 Sq.ft.",
+      frequency: "15 Days",
       services: [
-        'Everything in Standard Service',
-        'Comprehensive irrigation system maintenance and repairs',
-        'Expert plant care and specialized pruning',
-        'Regular pest and disease monitoring and treatment',
-        'Custom seasonal flower displays and garden redesigns',
-        'Lawn aeration and dethatching',
-        'Soil health improvement (composting, organic treatments)',
-        'Water feature cleaning and maintenance',
-        'Tree removal and stump grinding',
-        'Landscape lighting maintenance',
-        'Personalized garden management plans',
+        "Everything in Standard Service",
+        "Comprehensive irrigation system maintenance and repairs",
+        "Expert plant care and specialized pruning",
+        "Regular pest and disease monitoring and treatment",
+        "Custom seasonal flower displays and garden redesigns",
+        "Lawn aeration and dethatching",
+        "Soil health improvement (composting, organic treatments)",
+        "Water feature cleaning and maintenance",
+        "Tree removal and stump grinding",
+        "Landscape lighting maintenance",
+        "Personalized garden management plans",
       ],
       prices: [
-        { duration: '3 Months', price: '₹1999' },
-        { duration: '6 Months', price: '₹3499' },
-        { duration: '12 Months', price: '₹5499' },
+        { duration: "3 Months", price: "₹1999" },
+        { duration: "6 Months", price: "₹3499" },
+        { duration: "12 Months", price: "₹5499" },
       ],
     },
     {
-      name: 'Custom Garden Maintenance Service',
-      area: 'More Than 1500 Sq.ft.',
-      frequency: '15 Days',
+      name: "Custom Garden Maintenance Service",
+      area: "More Than 1500 Sq.ft.",
+      frequency: "15 Days",
       services: [
-        'Everything in Standard Service',
-        'Comprehensive irrigation system maintenance and repairs',
-        'Expert plant care and specialized pruning',
-        'Regular pest and disease monitoring and treatment',
-        'Custom seasonal flower displays and garden redesigns',
-        'Lawn aeration and dethatching',
-        'Soil health improvement (composting, organic treatments)',
-        'Water feature cleaning and maintenance',
-        'Tree removal and stump grinding',
-        'Landscape lighting maintenance',
-        'Personalized garden management plans',
+        "Everything in Standard Service",
+        "Comprehensive irrigation system maintenance and repairs",
+        "Expert plant care and specialized pruning",
+        "Regular pest and disease monitoring and treatment",
+        "Custom seasonal flower displays and garden redesigns",
+        "Lawn aeration and dethatching",
+        "Soil health improvement (composting, organic treatments)",
+        "Water feature cleaning and maintenance",
+        "Tree removal and stump grinding",
+        "Landscape lighting maintenance",
+        "Personalized garden management plans",
       ],
-      prices: [{ duration: 'On demand', price: 'Custom Price' }],
+      prices: [{ duration: "On demand", price: "Custom Price" }],
     },
   ];
 
@@ -106,8 +106,10 @@ const MaintenancePlan = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSelected Plan: ${selectedPlan}`;
-    const whatsappUrl = `https://wa.me/911234567890?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const whatsappUrl = `https://wa.me/911234567890?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
     setShowModal(false);
   };
 
@@ -124,24 +126,34 @@ const MaintenancePlan = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex flex-col items-center  px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
+            className="flex flex-col items-center justify-between  px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
           >
-            <h2 className="text-3xl font-young-serif mb-4 text-gray-800 text-center">{plan.name}</h2>
-            <p className="text-lg my-8 text-gray-600 text-center underline">{plan.area}</p>
-            <ul className="space-y-4 ml-2 text-gray-600  mb-8 text-sm font-semibold">
+            <h2 className="text-2xl font-young-serif mb-4 text-gray-800 text-center">
+              {plan.name}
+            </h2>
+            <p className="text-lg my-8 text-gray-600 text-center underline">
+              {plan.area}
+            </p>
+             <ul className="space-y-4 ml-2 text-gray-600  mb-8 text-sm font-semibold">
               {plan.services.map((service, idx) => (
                 <li key={idx}>✓ {service}</li>
               ))}
-              <li className="text-black bold underline text-lg">Frequency: {plan.frequency}</li>
+              <li className="text-black bold underline text-lg">
+                Frequency : {plan.frequency}
+              </li>
             </ul>
             <div className="w-full border-t-2 border-gray-200 pt-6">
-              <h3 className="text-xl font-young-serif mb-4 text-gray-800">Plans Available:</h3>
+              <h3 className="text-xl font-young-serif mb-4 text-gray-800">
+                Plans Available:
+              </h3>
               <div className="flex flex-col items-center space-y-4">
                 {plan.prices.map((price, idx) => (
                   <span
                     key={idx}
                     className="block w-[14rem]  py-3 px-6 bg-gray-100 rounded text-sm font-bold text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300"
-                    onClick={() => handlePlanClick(`${plan.name} - ${price.duration}`)}
+                    onClick={() =>
+                      handlePlanClick(`${plan.name} - ${price.duration}`)
+                    }
                   >
                     {price.duration} - {price.price}
                   </span>
@@ -182,7 +194,10 @@ const MaintenancePlan = () => {
                 className="block w-full mb-4 p-2 border"
               />
               <div className="flex justify-between">
-                <button type="submit" className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+                <button
+                  type="submit"
+                  className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+                >
                   Submit
                 </button>
                 <button

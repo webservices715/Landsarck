@@ -128,14 +128,14 @@ const MaintenancePlan = () => {
             key={index}
             className="flex flex-col px-2 py-8 bg-white shadow hover:shadow-2xl hover:-translate-y-4 transition-all ease-in-out duration-500"
           >
-            <div className="w-full h-[45rem] sm:h-full flex flex-col">
+            <div className="w-full h-[45rem] flex flex-col">
               <h2 className="text-2xl md:text-xl lg:text-2xl font-young-serif mb-4 text-gray-800 text-center">
                 {plan.name}
               </h2>
               <p className="text-lg md:text-base lg:text-lg my-8 text-gray-600 text-center underline">
                 {plan.area}
               </p>
-              <ul className="space-y-4 ml-2 text-gray-600 mb-8 text-sm  font-semibold">
+              <ul className="space-y-4 ml-2 text-gray-600 mb-8 text-sm sm:text-[10px] font-semibold">
                 {plan.services.map((service, idx) => (
                   <li key={idx}>✓ {service}</li>
                 ))}
@@ -146,14 +146,14 @@ const MaintenancePlan = () => {
             </div>
             <div className="w-full flex flex-col">
               <div className="w-full border-t-2 border-gray-200 pt-6">
-                <h3 className="text-xl   md:text-lg lg:text-lg font-young-serif mb-4 text-gray-800 pl-4">
+                <h3 className="text-xl md:text-lg lg:text-xl font-young-serif mb-4 text-gray-800 pl-4">
                   Plans Available:
                 </h3>
                 <div className="flex flex-col items-center space-y-4">
                   {plan.prices.map((price, idx) => (
                     <span
                       key={idx}
-                      className="block md:w-[14rem] lg:w-[12rem] py-3 px-6 bg-gray-100 rounded text-sm font-bold text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300"
+                      className="block w-[14rem] py-3 px-6 bg-gray-100 rounded text-sm font-bold text-gray-700 cursor-pointer shadow-md hover:shadow-sm transition-all ease-in-out duration-300"
                       onClick={() =>
                         handlePlanClick(`${plan.name} - ${price.duration}`)
                       }

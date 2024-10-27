@@ -11,7 +11,14 @@ const Location = () => {
     "Madurai", "Thrissur", "Raipur", "Ranchi", "Rajkot", "Pondicherry", 
     "Ludhiana", "Srinagar", "Salem", "Agra", "Amritsar", "Jalandhar", 
     "Meerut", "Gorakhpur", "Jodhpur", "Varanasi", "Jammu", "Kozhikode", 
-    "Bikaner", "Baramulla"
+    "Bikaner", "Baramulla",
+    // Rajasthan cities
+    "Ajmer", "Alwar", "Banswara", "Baran", "Barmer", "Bharatpur", 
+    "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Churu", "Dausa", 
+    "Dholpur", "Dungarpur", "Hanumangarh", "Jaipur", "Jaisalmer", 
+    "Jalore", "Jhalawar", "Jhunjhunu", "Jodhpur", "Karauli", "Kota", 
+    "Nagaur", "Pali", "Pratapgarh", "Rajsamand", "Sawai Madhopur", 
+    "Sikar", "Sirohi", "Sri Ganganagar", "Tonk", "Udaipur"
   ];
 
   const professions = [
@@ -23,7 +30,7 @@ const Location = () => {
       {professions.map((profession, idx) => (
         <div key={idx} className="mb-8 font-young-serif">
           <h2 className="text-lg font-medium text-white mb-4">{profession} Locations</h2>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-2">
             {cities.map((city, index) => (
               <p key={index} className="text-[12px] font-bitter">
                 {`${profession} in ${city}`}

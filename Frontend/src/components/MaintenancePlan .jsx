@@ -135,7 +135,7 @@ const MaintenancePlan = () => {
               <p className="text-lg md:text-base lg:text-lg my-8 text-gray-600 text-center underline">
                 {plan.area}
               </p>
-              <ul className="space-y-4 ml-2 text-gray-600 mb-8 text-sm sm:text-[10px] font-semibold">
+              <ul className="space-y-4 ml-2 text-gray-600 mb-8 lg:text-[14px]  font-semibold">
                 {plan.services.map((service, idx) => (
                   <li key={idx}>✓ {service}</li>
                 ))}

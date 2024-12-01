@@ -25,7 +25,9 @@ const Header = () => {
   const closeSignup = () => setIsSignupOpen(false);
 
   const handleScroll = () => {
-    setHeaderClass("bg-white text-black border-black");
+   
+      setHeaderClass("bg-white text-black border-black");
+   
   };
 
   useEffect(() => {
@@ -48,7 +50,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex  text-lg space-x-8 font-bitter">
+        <div className="flex items-center text-lg space-x-8 font-bitter">
           <nav className="hidden lg:flex space-x-6">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/blog">Blog</NavLink>
@@ -377,12 +379,12 @@ const Header = () => {
             )}
           </div>
 
-          <button
+          {/* <button
             onClick={openLogin}
             className="block w-full px-4 py-2 border border-black rounded-lg"
           >
             SIGN IN
-          </button>
+          </button> */}
           <button
             onClick={openSignup}
             className="block w-full px-4 py-3 border text-white bg-black rounded-lg"

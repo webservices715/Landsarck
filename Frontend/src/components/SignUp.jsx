@@ -19,10 +19,17 @@ const SignUp = ({ closeSignup }) => {
 
     const {firstName, lastName, gender, email } = formData;
 
-    const whatsappMessage = `Hello! My name is ${firstName} ${lastName}. My phone email is ${email}. Gender: ${gender}`;
+    const whatsappMessage = `Hello! My name is ${firstName} ${lastName}. \n Email: ${email} \n Gender: ${gender}`;
 
-    const whatsappNum = 4975847;
+    const whatsappNum = 7737002188;
 
+    const whatsappURL = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+
+    closeSignup();
 
   };
 
@@ -150,14 +157,14 @@ const SignUp = ({ closeSignup }) => {
                 Join Us
               </button>
             </form>
-            <div className="text-center mt-4">
+            {/* <div className="text-center mt-4">
               <p className="text-sm text-black">
                 Already a member?{" "}
                 <button onClick={openLogin} className="text-blue-500">
                   Sign in
                 </button>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

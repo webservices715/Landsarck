@@ -59,7 +59,7 @@ function Footer() {
         </div>
 
         {/* Made with GREDX */}
-        <div className="pt-4 lg:pt-0">
+        {/* <div className="pt-4 lg:pt-0">
           <p className="text-lg font-bitter">
             Made with{" "}
             <a
@@ -71,7 +71,7 @@ function Footer() {
               GREDX
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

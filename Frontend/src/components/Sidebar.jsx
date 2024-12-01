@@ -4,18 +4,19 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoLogoYoutube } from "react-icons/io";
-import { FaGoogle } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+
+const phoneNumber = "7737002188";
 
 const icons = [
-  { id: 1, icon: IoCallSharp, link: "tel:+" },
-  { id: 2, icon: FaWhatsapp, link: "https://" },
+  { id: 1, icon: IoCallSharp, link: `tel:+${phoneNumber}` }, 
+  { id: 2, icon: FaWhatsapp, link: `https://wa.me/${phoneNumber}` },
   { id: 3, icon: IoMail, link: "mailto:info@landsarck.com" },
-  { id: 4, icon: FaInstagram, link: "mailto:dr." },
-  { id: 5, icon: FaFacebookF, link: "mailto:dr." },
-  { id: 6, icon: FaLinkedinIn, link: "mailto:dr." },
-  { id: 7, icon: IoLogoYoutube, link: "youtube" },
+  { id: 4, icon: FaInstagram, link: "https://www.instagram.com/landsarck/" },
+  { id: 5, icon: FaFacebookF, link: "https://www.facebook.com/profile.php?id=61566920546974" },
+  // { id: 6, icon: FaLinkedinIn, link: "mailto:dr." },
+  // { id: 7, icon: IoLogoYoutube, link: "youtube" },
+  { id: 8, icon: FaPinterest, link: "https://in.pinterest.com/landsarck/" },
 ];
 
 const Sidebar = () => {

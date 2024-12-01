@@ -5,7 +5,7 @@ import Header from './components/Header'
 import PopupForm from './components/PopupForm'
 import Home from './pages/Home'
 import Location from './components/Location'
-import Blog from './components/blog'
+import Blog from './pages/Blog'
 
 function App() {
   return (

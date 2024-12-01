@@ -12,16 +12,20 @@ const PopupForm = () => {
     phone: '',
   });
 
-  // Trigger popup after 30 seconds
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+    setShowPopup(false); 
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
     }, 30000); // 30 seconds = 30000ms
 
-    return () => clearTimeout(timer); // Clean up the timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -30,13 +34,7 @@ const PopupForm = () => {
     });
   };
 
-  // Handle form submission
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
-    // Add your submission logic (e.g., send to server or API)
-    setShowPopup(false); // Close the popup after submission
-  };
+ 
 
   const openLogin = () => {
     setIsLoginOpen(true);

@@ -90,7 +90,7 @@ import React from 'react';
            </div>
          ))}
        </Slider>
-     </section>
+     </section >
    );
  };
  

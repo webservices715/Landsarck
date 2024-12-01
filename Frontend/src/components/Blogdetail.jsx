@@ -58,17 +58,17 @@ const Blogdetail = () => {
             {blog.items?.map((item, index) => (
               <div
                 key={index}
-                className="p-4 rounded-md bg-opacity-80 bg-gray-50 my-5"
+                className="py-4 rounded-md bg-opacity-80 my-5"
               >
                 {item.type && (
-                  <h2 className="text-2xl font-semibold text-gray-700">{item.type}</h2>
+                  <h2 className="text-2xl font-semibold text-gray-800">{item.type}</h2>
                 )}
                 {item.name && (
-                  <h2 className="text-2xl font-semibold text-gray-700 font-young-serif">
+                  <h2 className="text-2xl font-semibold text-gray-800 font-young-serif">
                     {item.name}
                   </h2>
                 )}
-                <p className="text-gray-600 mt-2 font-bitter">{item.description}</p>
+                <p className="text-gray-700 mt-2 font-bitter leading-loose text-justify">{item.description}</p>
 
                 {item.uses && (
                   <div className="mt-4">

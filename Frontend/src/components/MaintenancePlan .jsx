@@ -93,25 +93,31 @@ const MaintenancePlan = () => {
     },
   ];
 
-  const handlePlanClick = (plan) => {
-    setSelectedPlan(plan.name);
-    setShowModal(true);
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handlePlanClick = (planWithDuration) => {
+    setSelectedPlan(planWithDuration); // Ensure this sets the full plan name and duration.
+    setShowModal(true);
+  };
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (!selectedPlan) {
+      alert("Please select a plan before submitting.");
+      return;
+    }
     const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSelected Plan: ${selectedPlan}`;
-    const whatsappUrl = `https://wa.me/911234567890?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/7737002188?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
     setShowModal(false);
   };
+  
 
   const handleCancel = () => {
     setShowModal(false);
@@ -179,7 +185,7 @@ const MaintenancePlan = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="block w-full mb-4 p-2 border"
+                className="block w-full mb-4 p-2 border-2 rounded-md border-gray-900"
               />
               <input
                 type="email"
@@ -187,7 +193,7 @@ const MaintenancePlan = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="block w-full mb-4 p-2 border"
+                className="block w-full mb-4 p-2  border-2 rounded-md border-gray-900"
               />
               <input
                 type="text"
@@ -195,19 +201,19 @@ const MaintenancePlan = () => {
                 placeholder="Phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="block w-full mb-4 p-2 border"
+                className="block w-full mb-4 p-2  border-2 rounded-md border-gray-900"
               />
               <div className="flex justify-between">
                 <button
                   type="submit"
-                  className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+                  className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 shadow-2xl transition-all ease-in-out duration-500"
                 >
                   Submit
                 </button>
                 <button
                   type="button"
                   onClick={handleCancel}
-                  className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+                  className="border-2 border-gray-900  text-black py-2 px-4 rounded shadow-xl hover:bg-gray-900 hover:text-white transition-all ease-in-out duration-500"
                 >
                   Cancel
                 </button>

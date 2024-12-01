@@ -79,12 +79,14 @@ const Hero = () => {
             >
               {slides[currentSlide].description}
             </p>
-            <button
+            <a
+            href={`https://wa.me/${7737002188}`}
+            target="_blank"
               className="text-black bg-white px-8 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 md:py-6 text-lg md:text-xl font-bitter rounded-full fadeInAnimation"
               style={{ animation: "slideIn 1.5s ease-in-out forwards" }}
             >
               Book Your Landscape Space
-            </button>
+            </a>
           </>
         )}
       </div>

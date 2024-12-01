@@ -61,7 +61,9 @@ const FeaturesSection = () => {
               className="w-20 h-20"
             />
           </div>
-          <h3 className="text-xl font-young-serif">Post-installation service</h3>
+          <h3 className="text-xl font-young-serif">
+            Post-installation service
+          </h3>
           <p className="text-gray-600 font-bitter mt-2">
             Complete your design journey and get unwavering support from our
             dedicated care team.
@@ -70,9 +72,13 @@ const FeaturesSection = () => {
       </div>
 
       <div className="flex justify-center mt-8">
-        <button className="px-6 py-4 border border-black hover:bg-black transition-all ease-out duration-300 text-black hover:text-white font-bitter font-semibold rounded">
+        <a
+          href={`https://wa.me/${7737002188}`}
+          target="_blank"
+          className="px-6 py-4 border border-black hover:bg-black transition-all ease-out duration-300 text-black hover:text-white font-bitter font-semibold rounded"
+        >
           Book Free Design Session
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -7,8 +7,13 @@ function Footer() {
       <div className="lg:flex lg:justify-between lg:items-start">
         {/* Site Title (1st column) */}
         <div className="flex flex-col gap-5">
-          <div className="mb-8 lg:mb-0 lg:flex-grow lg:max-w-xs">
+          <div className="mb-8 lg:mb-0 lg:flex-grow lg:max-w-md text-justify">
             <h2 className="text-6xl font-young-serif">Landsarck</h2>
+            <p className="py-2 text-lg text-gray-800">
+              Transform your outdoor space into a stunning retreat with expert
+              landscape design, blending functionality and beauty to create the
+              perfect environment for relaxation and enjoyment.
+            </p>
           </div>
         </div>
 
@@ -40,7 +45,7 @@ function Footer() {
                 info@landsarck.com
               </a>
               <br />
-              (555) 555-5555
+              (+91) 7737002188
             </p>
           </div>
         </div>

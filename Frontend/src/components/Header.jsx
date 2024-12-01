@@ -24,12 +24,12 @@ const Header = () => {
   const openSignup = () => setIsSignupOpen(true);
   const closeSignup = () => setIsSignupOpen(false);
 
+  
+
   const handleScroll = () => {
-    if (window.scrollY > 0) {
+   
       setHeaderClass("bg-white text-black border-black");
-    } else {
-      setHeaderClass("bg-transparent text-white");
-    }
+   
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Header = () => {
         <div className="flex  text-lg space-x-8 font-bitter">
           <nav className="hidden lg:flex space-x-6">
             <NavLink to="/">Home</NavLink>
-
+            <NavLink to="/blog">Blog</NavLink>
             <div
               className="relative"
               onMouseEnter={() => setIsServicesDropdownOpen(true)}

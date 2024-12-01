@@ -5,6 +5,7 @@ import Header from './components/Header'
 import PopupForm from './components/PopupForm'
 import Home from './pages/Home'
 import Location from './components/Location'
+import Blog from './components/blog'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
             {/* <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/testimonials" element={<Testimonials />} />

@@ -99,7 +99,7 @@
         "date": "May 20, 2023",
         "image": "/deckType.jpg",
         "description": "Decks serve as outdoor spaces attached to a home, perfect for relaxing, entertaining, or dining. They not only add beauty to a property but also improve how space is used, bridging the gap between indoor and outdoor living. Over the years, deck designs and materials have changed, giving homeowners many choices that can fit various needs, climates, and tastes. Here, we look at some popular deck types and the special features they offer.",
-        "types": [
+        "items": [
             {
                 "type": "Attached Decks",
                 "description": "Attached decks are among the most popular, usually built right off the back of a house. Unlike patios made of concrete or stone, these decks are constructed with materials like wood, composite, or vinyl. They provide an easy flow between indoor and outdoor areas, often linking directly to spaces like the living room or kitchen. Perfect for grilling and dining, they expand your home’s usable area."
@@ -136,7 +136,7 @@
         "date": "December 1, 2024",
         "image": "/gardenType.jpg",
         "description": "There are many kinds of gardens, each with its own charm and purpose. Whether you want a peaceful Japanese garden or a useful vegetable patch, every garden type can bring beauty and function to your outdoor area. Here’s a look at some popular garden styles that might inspire your next gardening adventure.",
-        "types": [
+        "items": [
             {
                 "type": "Vegetable Gardens",
                 "description": "Vegetable gardens are practical spaces where food is grown. They can be as simple as a few pots on a balcony or as big as a full yard. You might grow tomatoes, carrots, lettuce, and herbs, or even add fruit trees and bushes. Many gardeners find great joy in harvesting their own fresh produce, knowing it’s grown without chemicals."
@@ -181,7 +181,7 @@
         "date": "December 1, 2024",
         "image": "/Jacuzzi.jpg",
         "description": "The term 'Jacuzzi' is often synonymous with hot tubs, but it originally referred to a brand known for its whirlpool bath products. Jacuzzi Inc. was founded in 1915 by the Jacuzzi brothers, who initially made aircraft propellers. They later shifted their focus to health and wellness, creating the whirlpool bath that we now associate with the brand.",
-        "types": [
+        "items": [
             {
                 "description": "The evolution of the modern Jacuzzi began in the 1940s. Candido Jacuzzi, one of the brothers, sought a way to ease his son's suffering from rheumatoid arthritis. He invented a portable pump that could be placed in a bathtub to create massaging water jets. This invention laid the foundation for the Jacuzzi whirlpool bath, which led to the development of the hot tub we know today. In 1968, the company introduced the first fully integrated whirlpool bath designed to fit into a standard bathroom, making hydrotherapy accessible in homes."
             },
@@ -205,6 +205,5 @@
             }
         ]
     }
-    
 ]
   

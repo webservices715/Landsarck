@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import blogsData from "../utils/blog.json";
+import { useNavigate } from "react-router-dom";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const blogTypes = blogsData;
     setBlogs(blogTypes);
@@ -26,9 +26,12 @@ const BlogList = () => {
               key={index}
               className="relative cursor-pointer flex items-end justify-start w-full text-left bg-center bg-cover h-96 transition-all duration-500 ease-in-out hover:scale-105 rounded-lg shadow-md hover:shadow-xl"
               style={{
-                backgroundImage: `url(${blog.image || 'default-image.jpg'})`, // Use a default image if no image is provided
+                backgroundImage: `url(${blog.image || 'default-image.jpg'})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+              }}
+              onClick={() => {
+                navigate(`/blog/${blog.id}`);
               }}
             >
               <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>

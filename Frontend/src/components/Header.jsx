@@ -70,43 +70,43 @@ const Header = () => {
                 <div className="grid grid-cols-2 gap-2 items-center">
                   {" "}
                   {/* Two-column grid */}
-                  <NavLink to="/terrace-garden" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Terrace Garden
                   </NavLink>
                   <NavLink
-                    to="/landscape-architect"
+                    to="/"
                     className="block px-4 py-2"
                   >
                     Landscape Architect & Designer
                   </NavLink>
-                  <NavLink to="/horticulturist" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Horticulturist
                   </NavLink>
-                  <NavLink to="/agriculture-expert" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Agriculture Expert
                   </NavLink>
-                  <NavLink to="/garden-maintenance" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Garden Maintenance
                   </NavLink>
                   <NavLink
-                    to="/irrigation-specialist"
+                    to="/"
                     className="block px-4 py-2"
                   >
                     Irrigation Specialist & Installation
                   </NavLink>
                   <NavLink
-                    to="/waterproofing-expert"
+                    to="/"
                     className="block px-4 py-2"
                   >
                     Water Proofing Expert
                   </NavLink>
                   <NavLink
-                    to="/landscape-contractor"
+                    to="/"
                     className="block px-4 py-2"
                   >
                     Landscape Contractor
                   </NavLink>
-                  <NavLink to="/pool-technician" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Swimming Pool Service Technician
                   </NavLink>
                 </div>
@@ -127,40 +127,40 @@ const Header = () => {
                 <div className="grid grid-cols-2 gap-2 items-center">
                   {" "}
                   {/* Two-column grid */}
-                  <NavLink to="/tree" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Tree
                   </NavLink>
-                  <NavLink to="/plants" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Plants
                   </NavLink>
-                  <NavLink to="/ground-covers" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Ground Covers
                   </NavLink>
-                  <NavLink to="/creeper" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Creeper
                   </NavLink>
-                  <NavLink to="/seeds" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Seeds
                   </NavLink>
-                  <NavLink to="/pots-planter" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Pots & Planter
                   </NavLink>
-                  <NavLink to="/garden-lights" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Garden Lights
                   </NavLink>
-                  <NavLink to="/outdoor-furniture" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Outdoor Furniture
                   </NavLink>
-                  <NavLink to="/fire-features" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Fire Features
                   </NavLink>
-                  <NavLink to="/garden-ornament" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Garden Ornament
                   </NavLink>
-                  <NavLink to="/stone-tile" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Stone & Tile
                   </NavLink>
-                  <NavLink to="/soil-fertilizer" className="block px-4 py-2">
+                  <NavLink to="/" className="block px-4 py-2">
                     Soil & Fertilizer
                   </NavLink>
                 </div>
@@ -179,17 +179,17 @@ const Header = () => {
                   isCourseDropdownOpen ? "show" : ""
                 }`}
               >
-                <NavLink to="/diploma-horticulture" className="block px-4 py-2">
+                <NavLink to="/" className="block px-4 py-2">
                   Diploma in Horticulture
                 </NavLink>
-                <NavLink to="/diploma-agriculture" className="block px-4 py-2">
+                <NavLink to="/" className="block px-4 py-2">
                   Diploma in Agriculture
                 </NavLink>
-                <NavLink to="/diploma-landscape" className="block px-4 py-2">
+                <NavLink to="/" className="block px-4 py-2">
                   Diploma in Landscape & Garden Design
                 </NavLink>
                 <NavLink
-                  to="/certificate-terrace-garden"
+                  to="/"
                   className="block px-4 py-2"
                 >
                   Certificate in Terrace Garden
@@ -209,10 +209,10 @@ const Header = () => {
                   isAddMoreDropdownOpen ? "show" : ""
                 }`}
               >
-                <NavLink to="/about" className="block px-4 py-2">
+                <NavLink to="/" className="block px-4 py-2">
                   About
                 </NavLink>
-                <NavLink to="/contact" className="block px-4 py-2">
+                <NavLink to="/" className="block px-4 py-2">
                   Contact
                 </NavLink>
               </div>
@@ -220,7 +220,7 @@ const Header = () => {
           </nav>
 
           {/* Cart and Auth Buttons */}
-          <NavLink to="/cart">Cart (0)</NavLink>
+          <NavLink to="/">Cart (0)</NavLink>
           <button
             onClick={openLogin}
             className={`hidden lg:inline px-4 py-2 border rounded-lg transition-all ${
@@ -271,31 +271,31 @@ const Header = () => {
             </button>
             {isMobileServicesOpen && (
               <div className="ml-4 space-y-5 p-3 bg-gray-50">
-                <NavLink to="/terrace-garden" className="block ">
+                <NavLink to="/" className="block ">
                   Terrace Garden
                 </NavLink>
-                <NavLink to="/landscape-architect" className="block ">
+                <NavLink to="/" className="block ">
                   Landscape Architect & Designer
                 </NavLink>
-                <NavLink to="/horticulturist" className="block ">
+                <NavLink to="/" className="block ">
                   Horticulturist
                 </NavLink>
-                <NavLink to="/agriculture-expert" className="block ">
+                <NavLink to="/" className="block ">
                   Agriculture Expert
                 </NavLink>
-                <NavLink to="/garden-maintenance" className="block">
+                <NavLink to="/" className="block">
                   Garden Maintenance
                 </NavLink>
-                <NavLink to="/irrigation-specialist" className="block ">
+                <NavLink to="/" className="block ">
                   Irrigation Specialist & Installation
                 </NavLink>
-                <NavLink to="/waterproofing-expert" className="block ">
+                <NavLink to="/" className="block ">
                   Water Proofing Expert
                 </NavLink>
-                <NavLink to="/landscape-contractor" className="block ">
+                <NavLink to="/" className="block ">
                   Landscape Contractor
                 </NavLink>
-                <NavLink to="/pool-technician" className="block ">
+                <NavLink to="/" className="block ">
                   Swimming Pool Service Technician
                 </NavLink>
               </div>
@@ -310,40 +310,40 @@ const Header = () => {
             </button>
             {isMobileShopOpen && (
               <div className="ml-4  space-y-5 p-3 bg-gray-50">
-                <NavLink to="/tree" className="block">
+                <NavLink to="/" className="block">
                   Tree
                 </NavLink>
-                <NavLink to="/plants" className="block">
+                <NavLink to="/" className="block">
                   Plants
                 </NavLink>
-                <NavLink to="/ground-covers" className="block">
+                <NavLink to="/" className="block">
                   Ground Covers
                 </NavLink>
-                <NavLink to="/creeper" className="block">
+                <NavLink to="/" className="block">
                   Creeper
                 </NavLink>
-                <NavLink to="/seeds" className="block">
+                <NavLink to="/" className="block">
                   Seeds
                 </NavLink>
-                <NavLink to="/pots-planter" className="block">
+                <NavLink to="/" className="block">
                   Pots & Planter
                 </NavLink>
-                <NavLink to="/garden-lights" className="block">
+                <NavLink to="/" className="block">
                   Garden Lights
                 </NavLink>
-                <NavLink to="/outdoor-furniture" className="block">
+                <NavLink to="/" className="block">
                   Outdoor Furniture
                 </NavLink>
-                <NavLink to="/fire-features" className="block">
+                <NavLink to="/" className="block">
                   Fire Features
                 </NavLink>
-                <NavLink to="/garden-ornament" className="block">
+                <NavLink to="/" className="block">
                   Garden Ornament
                 </NavLink>
-                <NavLink to="/stone-tile" className="block">
+                <NavLink to="/" className="block">
                   Stone & Tile
                 </NavLink>
-                <NavLink to="/soil-fertilizer" className="block">
+                <NavLink to="/" className="block">
                   Soil & Fertilizer
                 </NavLink>
               </div>
@@ -358,16 +358,16 @@ const Header = () => {
             </button>
             {isMobileCourseOpen && (
               <div className="ml-4  space-y-5 p-3 bg-gray-50">
-                <NavLink to="/diploma-horticulture" className="block">
+                <NavLink to="/" className="block">
                   Diploma in Horticulture
                 </NavLink>
-                <NavLink to="/diploma-agriculture" className="block">
+                <NavLink to="/" className="block">
                   Diploma in Agriculture
                 </NavLink>
-                <NavLink to="/diploma-landscape" className="block">
+                <NavLink to="/" className="block">
                   Diploma in Landscape & Garden Design
                 </NavLink>
-                <NavLink to="/certificate-terrace-garden" className="block">
+                <NavLink to="/" className="block">
                   Certificate in Terrace Garden
                 </NavLink>
               </div>
@@ -382,10 +382,10 @@ const Header = () => {
             </button>
             {isMobileAddMoreOpen && (
               <div className="ml-4  space-y-5 p-3 bg-gray-50">
-                <NavLink to="/about" className="block">
+                <NavLink to="/" className="block">
                   About
                 </NavLink>
-                <NavLink to="/contact" className="block">
+                <NavLink to="/" className="block">
                   Contact
                 </NavLink>
               </div>

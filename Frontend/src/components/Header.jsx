@@ -203,7 +203,7 @@ const Header = () => {
           </nav>
 
           {/* Cart and Auth Buttons */}
-          <NavLink to="/">Cart (0)</NavLink>
+          {/* <NavLink to="/">Cart (0)</NavLink> */}
           {/* <button
             onClick={openLogin}
             className={`hidden lg:inline px-4 py-2 border rounded-lg transition-all ${

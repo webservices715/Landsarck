@@ -13,10 +13,10 @@ const BlogList = () => {
   return (
     <section className="py-12 md:py-36 font-barlow">
       <div className="max-w-screen-xl p-5 mx-auto dark:text-gray-800">
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-2">
+        <h2 className="text-4xl font-bold text-gray-900 text-center mb-2 font-young-serif">
           Landscape Blogs
         </h2>
-        <p className="text-xl text-gray-500 text-center mb-16">
+        <p className="text-lg text-gray-500 text-center mb-16 font-bitter">
           Explore different types of landscape and their applications
           in outdoor spaces to enhance ambiance and functionality.
         </p>

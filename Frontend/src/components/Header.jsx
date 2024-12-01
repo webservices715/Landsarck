@@ -24,10 +24,10 @@ const Header = () => {
   const openSignup = () => setIsSignupOpen(true);
   const closeSignup = () => setIsSignupOpen(false);
 
-  
-
   const handleScroll = () => {
+   
       setHeaderClass("bg-white text-black border-black");
+   
   };
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex  text-lg space-x-8 font-bitter">
+        <div className="flex items-center text-lg space-x-8 font-bitter">
           <nav className="hidden lg:flex space-x-6">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/blog">Blog</NavLink>
@@ -71,10 +71,7 @@ const Header = () => {
                   <NavLink to="/" className="block px-4 py-2">
                     Terrace Garden
                   </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2"
-                  >
+                  <NavLink to="/" className="block px-4 py-2">
                     Landscape Architect & Designer
                   </NavLink>
                   <NavLink to="/" className="block px-4 py-2">
@@ -86,22 +83,13 @@ const Header = () => {
                   <NavLink to="/" className="block px-4 py-2">
                     Garden Maintenance
                   </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2"
-                  >
+                  <NavLink to="/" className="block px-4 py-2">
                     Irrigation Specialist & Installation
                   </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2"
-                  >
+                  <NavLink to="/" className="block px-4 py-2">
                     Water Proofing Expert
                   </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2"
-                  >
+                  <NavLink to="/" className="block px-4 py-2">
                     Landscape Contractor
                   </NavLink>
                   <NavLink to="/" className="block px-4 py-2">
@@ -186,10 +174,7 @@ const Header = () => {
                 <NavLink to="/" className="block px-4 py-2">
                   Diploma in Landscape & Garden Design
                 </NavLink>
-                <NavLink
-                  to="/"
-                  className="block px-4 py-2"
-                >
+                <NavLink to="/" className="block px-4 py-2">
                   Certificate in Terrace Garden
                 </NavLink>
               </div>
@@ -219,7 +204,7 @@ const Header = () => {
 
           {/* Cart and Auth Buttons */}
           <NavLink to="/">Cart (0)</NavLink>
-          <button
+          {/* <button
             onClick={openLogin}
             className={`hidden lg:inline px-4 py-2 border rounded-lg transition-all ${
               headerClass === "bg-white text-black border-black"
@@ -228,7 +213,7 @@ const Header = () => {
             }`}
           >
             SIGN IN
-          </button>
+          </button> */}
           <button
             onClick={openSignup}
             className={`hidden lg:inline px-4 py-2 border rounded-lg transition-all ${
@@ -260,6 +245,10 @@ const Header = () => {
           <NavLink to="/" className="block" onClick={toggleMenu}>
             Home
           </NavLink>
+          <div>
+            <NavLink to="/blog">Blog</NavLink>
+          </div>
+
           <div>
             <button
               onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -376,7 +365,7 @@ const Header = () => {
               onClick={() => setIsMobileAddMoreOpen(!isMobileAddMoreOpen)}
               className="w-full text-left"
             >
-               More
+              More
             </button>
             {isMobileAddMoreOpen && (
               <div className="ml-4  space-y-5 p-3 bg-gray-50">
@@ -390,12 +379,12 @@ const Header = () => {
             )}
           </div>
 
-          <button
+          {/* <button
             onClick={openLogin}
             className="block w-full px-4 py-2 border border-black rounded-lg"
           >
             SIGN IN
-          </button>
+          </button> */}
           <button
             onClick={openSignup}
             className="block w-full px-4 py-3 border text-white bg-black rounded-lg"

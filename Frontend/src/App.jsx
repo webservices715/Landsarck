@@ -18,11 +18,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
+<<<<<<< HEAD
             <Route path="/blog/:id" element={<Blogdetail />} /> 
             {/* <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} /> */}
+=======
+           
+>>>>>>> 8f99300ef2f6621cd2728565a97c3d18368ab870
           </Routes>
         </main>
         <Footer />

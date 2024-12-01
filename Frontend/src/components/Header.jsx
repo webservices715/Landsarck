@@ -27,9 +27,7 @@ const Header = () => {
   
 
   const handleScroll = () => {
-   
       setHeaderClass("bg-white text-black border-black");
-   
   };
 
   useEffect(() => {

@@ -1,64 +1,97 @@
-{
-    "landscape_lighting": {
-      "description": "In landscaping, lighting is important for enhancing outdoor spaces by adding functionality and ambiance. The right lights improve visibility while highlighting features and creating a welcoming atmosphere.",
-      "types": [
-        {
-          "type": "Path Lights",
-          "description": "Popular lights used to illuminate walkways, garden paths, and driveways, adding charm to outdoor spaces.",
-          "uses": ["Walkways", "Garden paths", "Flowerbeds"],
-          "fixture_options": ["Solar", "LED", "Low-voltage types"],
-          "design_tip": "Place lights in a staggered manner along paths for an even look and softer effect."
-        },
-        {
-          "type": "Spotlights and Uplights",
-          "description": "Strong lights that highlight special features with narrow beams. Uplights shine upward, while spotlights can also be mounted to shine downward.",
-          "uses": ["Trees", "Sculptures", "Water features", "Textured walls"],
-          "fixture_options": ["Adjustable heads for different angles"],
-          "design_tip": "Use spotlights from multiple angles for dramatic shadows and added texture."
-        },
-        {
-          "type": "Floodlights",
-          "description": "Broad, bright lights used for illuminating large areas. Ideal for security and showcasing big landscape features.",
-          "uses": ["Large trees", "Lawns", "Wide flower beds", "Security lighting"],
-          "fixture_options": ["Motion sensors", "High-lumen LEDs"],
-          "design_tip": "Opt for dimmable floodlights to control brightness."
-        },
-        {
-          "type": "Inground Lights (Well Lights)",
-          "description": "Discreet lights that sit flush with the ground to highlight landscape or architectural details.",
-          "uses": ["Pathways", "Driveways", "Trees", "Walls", "Patios"],
-          "fixture_options": ["LED", "Waterproof options for wet areas"],
-          "design_tip": "Position near trees or tall shrubs to shine upward and add depth."
-        },
-        {
-          "type": "Deck and Step Lights",
-          "description": "Small fixtures designed for safety, lighting up decks, staircases, and steps with subtle, focused lighting.",
-          "uses": ["Decks", "Staircases", "Steps", "Retaining walls"],
-          "fixture_options": ["Recessed styles", "Strip lights for edges"],
-          "design_tip": "Mount along stair risers for a sleek and functional look."
-        },
-        {
-          "type": "Wall Washers",
-          "description": "Lights that provide broad, even illumination for walls, fences, or tall hedges, creating a soft glow.",
-          "uses": ["Exterior walls", "Garden walls", "Large hedges"],
-          "fixture_options": ["LED", "Angled for different spreads"],
-          "design_tip": "Space wall washers evenly to avoid bright spots."
-        },
-        {
-          "type": "Bollard Lights",
-          "description": "Column-like fixtures that combine lighting and decoration, suitable for large spaces.",
-          "uses": ["Driveways", "Pathways", "Open lawns"],
-          "fixture_options": ["Solar-powered", "LED", "Low-voltage models"],
-          "design_tip": "Space bollard lights to create a balanced look for outlining areas."
-        },
-        {
-          "type": "String Lights and Lanterns",
-          "description": "Decorative lights ideal for creating a festive, cozy vibe in outdoor spaces.",
-          "uses": ["Trees", "Posts", "Pergolas", "Pathways", "Tables"],
-          "fixture_options": ["Hanging string lights", "Portable lanterns"],
-          "design_tip": "Use string lights between trees or pergolas for a warm, inviting ambiance."
-        }
-      ]
+[
+    {
+          "id":"1",
+          "heading":"Landscape Lighting",
+           "date":"May 20, 2023",
+          "image":"/landscapeLight.jpg",
+          "description": "In landscaping, lighting is important for enhancing outdoor spaces by adding functionality and ambiance. The right lights improve visibility while highlighting features and creating a welcoming atmosphere.",
+          "types": [
+            {
+              "type": "Path Lights",
+              "description": "Popular lights used to illuminate walkways, garden paths, and driveways, adding charm to outdoor spaces.",
+              "uses": ["Walkways", "Garden paths", "Flowerbeds"],
+              "fixture_options": ["Solar", "LED", "Low-voltage types"],
+              "design_tip": "Place lights in a staggered manner along paths for an even look and softer effect."
+            },
+            {
+              "type": "Spotlights and Uplights",
+              "description": "Strong lights that highlight special features with narrow beams. Uplights shine upward, while spotlights can also be mounted to shine downward.",
+              "uses": ["Trees", "Sculptures", "Water features", "Textured walls"],
+              "fixture_options": ["Adjustable heads for different angles"],
+              "design_tip": "Use spotlights from multiple angles for dramatic shadows and added texture."
+            },
+            {
+              "type": "Floodlights",
+              "description": "Broad, bright lights used for illuminating large areas. Ideal for security and showcasing big landscape features.",
+              "uses": ["Large trees", "Lawns", "Wide flower beds", "Security lighting"],
+              "fixture_options": ["Motion sensors", "High-lumen LEDs"],
+              "design_tip": "Opt for dimmable floodlights to control brightness."
+            },
+            {
+              "type": "Inground Lights (Well Lights)",
+              "description": "Discreet lights that sit flush with the ground to highlight landscape or architectural details.",
+              "uses": ["Pathways", "Driveways", "Trees", "Walls", "Patios"],
+              "fixture_options": ["LED", "Waterproof options for wet areas"],
+              "design_tip": "Position near trees or tall shrubs to shine upward and add depth."
+            },
+            {
+              "type": "Deck and Step Lights",
+              "description": "Small fixtures designed for safety, lighting up decks, staircases, and steps with subtle, focused lighting.",
+              "uses": ["Decks", "Staircases", "Steps", "Retaining walls"],
+              "fixture_options": ["Recessed styles", "Strip lights for edges"],
+              "design_tip": "Mount along stair risers for a sleek and functional look."
+            },
+            {
+              "type": "Wall Washers",
+              "description": "Lights that provide broad, even illumination for walls, fences, or tall hedges, creating a soft glow.",
+              "uses": ["Exterior walls", "Garden walls", "Large hedges"],
+              "fixture_options": ["LED", "Angled for different spreads"],
+              "design_tip": "Space wall washers evenly to avoid bright spots."
+            },
+            {
+              "type": "Bollard Lights",
+              "description": "Column-like fixtures that combine lighting and decoration, suitable for large spaces.",
+              "uses": ["Driveways", "Pathways", "Open lawns"],
+              "fixture_options": ["Solar-powered", "LED", "Low-voltage models"],
+              "design_tip": "Space bollard lights to create a balanced look for outlining areas."
+            },
+            {
+              "type": "String Lights and Lanterns",
+              "description": "Decorative lights ideal for creating a festive, cozy vibe in outdoor spaces.",
+              "uses": ["Trees", "Posts", "Pergolas", "Pathways", "Tables"],
+              "fixture_options": ["Hanging string lights", "Portable lanterns"],
+              "design_tip": "Use string lights between trees or pergolas for a warm, inviting ambiance."
+            }
+          ]
+    },
+    {
+        "id": "2",
+        "heading": "Five Trendy Pots",
+        "date": "May 20, 2023",
+        "image": "/trendyPots.jpg",
+        "description": "Discover the top 5 trendy pots for adding a modern touch to your indoor and outdoor spaces.",
+        "items": [
+            {
+                "name": "Ecopots Recycled Plastic Planters",
+                "description": "These pots are all about being eco-friendly, made from recycled materials. They resist UV rays and frost, come in a variety of colors, and have a sleek, modern design that fits perfectly indoors or out. Plus, they are very durable and require little care."
+            },
+            {
+                "name": "IKEA BRUNBÄR Terracotta Pots",
+                "description": "If you're looking for an affordable choice, these pots add a charming, rustic touch to any space. Thanks to terracotta's natural ability to retain moisture, they are excellent for your plants. Each pot has a drainage hole and a saucer, making them user-friendly. While they are meant for outdoor use, they can thrive indoors with a bit of attention."
+            },
+            {
+                "name": "Fox & Fern Fiberstone Planters",
+                "description": "These lightweight pots are perfect for indoor areas, featuring a stylish and modern design. They come with a drainage hole and a removable plug, and you can find them in neutral shades and different sizes, making them a great match for contemporary decor."
+            },
+            {
+                "name": "Bloem Self-Watering Planters",
+                "description": "For those who love plants but have busy lives, these pots are a blessing. Each has a smart self-watering system that keeps the soil just right for your plants. They’re made from UV-resistant plastic resin and come in a variety of colors, suitable for both indoor and outdoor use."
+            },
+            {
+                "name": "Upcycled Containers",
+                "description": "Giving new life to old items like drawers, teapots, or cookie tins as planters is becoming quite popular. This trend creates a unique, eco-friendly look while helping to reduce waste. Upcycled pots blend beautifully with rustic or vintage styles and support a sustainable way of living."
+            }
+        ]
     }
-  }
+]
   

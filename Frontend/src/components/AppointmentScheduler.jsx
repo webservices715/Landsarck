@@ -104,8 +104,30 @@ const AppointmentScheduler = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+  
+    const message = `
+      Appointment Details:\n
+      Plan: ${selectedPlan}\n
+      Time: ${Object.entries(selectedTimes).map(
+        ([date, time]) => `${getDateString(new Date(date))} at ${time}`
+      )}\n
+      Name: ${formData.fullName}\n
+      Email: ${formData.email}\n
+      Phone: ${formData.phone}
+    `;
+  
+    // URL encode the message
+    const encodedMessage = encodeURIComponent(message.trim());
+  
+    // WhatsApp API link (replace with your WhatsApp number)
+    const whatsappLink = `https://wa.me/7737002188?text=${encodedMessage}`;
+  
+    // Open WhatsApp with the pre-filled message
+    window.open(whatsappLink, "_blank");
+  
     setFormSubmitted(true);
   };
+  
 
   return (
     <div
@@ -259,7 +281,7 @@ const AppointmentScheduler = () => {
           )}
         </div>
 
-        <div
+        {/* <div
           className={`transition-all duration-500 overflow-hidden border rounded-lg p-4 mt-4 ₹{formSubmitted ? 'max-h-screen' : 'max-h-15'}`}
         >
           <div className="flex gap-2">
@@ -299,12 +321,13 @@ const AppointmentScheduler = () => {
               >
                 Edit Appointment
               </button>
-              <button className="bg-white text-black border border-black px-6 py-3 rounded-md mt-4 ml-4">
+              <button onClick={handleFormSubmit} className="bg-white text-black border border-black px-6 py-3 rounded-md mt-4 ml-4">
                 Submit
               </button>
             </div>
           )}
-        </div>
+        </div> */}
+
       </div>
     </div>
   );

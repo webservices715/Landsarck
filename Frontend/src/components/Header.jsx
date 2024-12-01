@@ -41,7 +41,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 pt-6 pb-2 lg:px-8 w-full z-50 ${headerClass}`}
     >
-      <div className="flex justify-between  px-6 py-4">
+      <div className="flex justify-between px-6 py-4">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <NavLink to="/" className="font-young-serif">

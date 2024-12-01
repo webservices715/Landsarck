@@ -19,9 +19,9 @@ const slides = [
   },
   {
     id: 3,
-    title: "Create Your Dream Garden Oasis",
+    title: "Book Your Landsarck Space",
     description:
-      "Create your dream garden oasis with personalized landscape designs that transform your terrace into a serene retreat, blending nature’s beauty with luxury for ultimate relaxation.",
+      "Book your Landsarck space and experience the perfect blend of functionality and beauty in a serene outdoor retreat. ",
     imageUrl:
       "https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },

@@ -24,22 +24,10 @@ const Header = () => {
   const openSignup = () => setIsSignupOpen(true);
   const closeSignup = () => setIsSignupOpen(false);
 
-  const handleScroll = () => {
-   
-      setHeaderClass("bg-white text-black border-black");
-   
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 pt-6 pb-2 lg:px-8 w-full z-50 ${headerClass}`}
+      className={`fixed top-0 left-0 pt-6 pb-2 lg:px-8 w-full z-50 bg-white text-black border-black`}
     >
       <div className="flex justify-between px-6 py-4">
         {/* Logo */}

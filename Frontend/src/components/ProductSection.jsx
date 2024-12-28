@@ -38,7 +38,7 @@ const ProductSection = () => {
         </h2>
         {/* Large screens pe dikhaye */}
         <a
-          href={`https://wa.me/${7737002188}`}
+          href={`https://wa.me/${9680027791}`}
           target="_blank"
           className="hidden md:block px-12 py-4 sm:px-16 sm:py-5 md:px-20 md:py-6 font-bitter border border-black rounded-full hover:bg-black hover:text-white transition"
         >
@@ -67,7 +67,7 @@ const ProductSection = () => {
                   Starting from {product.price}/-
                 </p>
                 <a
-            href={`https://wa.me/${7737002188}`}
+            href={`https://wa.me/${9680027791}`}
             target="_blank" className="ml-3 px-4 py-3 font-bitter border border-black text-black rounded-md hover:bg-black  hover:text-white transition-all ease-in-out duration-300">
                   Explore more
                 </a>

@@ -111,7 +111,7 @@ const MaintenancePlan = () => {
       return;
     }
     const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSelected Plan: ${selectedPlan}`;
-    const whatsappUrl = `https://wa.me/7737002188?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/9680027791?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");

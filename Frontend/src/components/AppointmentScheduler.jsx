@@ -120,7 +120,7 @@ const AppointmentScheduler = () => {
     const encodedMessage = encodeURIComponent(message.trim());
   
     // WhatsApp API link (replace with your WhatsApp number)
-    const whatsappLink = `https://wa.me/7737002188?text=${encodedMessage}`;
+    const whatsappLink = `https://wa.me/9680027791?text=${encodedMessage}`;
   
     // Open WhatsApp with the pre-filled message
     window.open(whatsappLink, "_blank");

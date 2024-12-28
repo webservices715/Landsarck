@@ -23,7 +23,7 @@ Here are my details:
 - Phone: ${phone || "Not Provided"}
 - Email: ${email}`;
 
-    const whatsappNumber = "7737002188";
+    const whatsappNumber = "9680027791";
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage

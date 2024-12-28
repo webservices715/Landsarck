@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 
-const phoneNumber = "7737002188";
+const phoneNumber = "9680027791";
 
 const icons = [
   { id: 1, icon: IoCallSharp, link: `tel:+${phoneNumber}` }, 

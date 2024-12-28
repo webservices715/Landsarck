@@ -19,7 +19,7 @@ const PopupForm = () => {
 
     const whatsappMessage = `Hello! My name is ${name}. \n Phone number: ${phone}.\n Email: ${email}`;
 
-    const whatsappNum = 7737002188;
+    const whatsappNum = 9680027791;
 
     const whatsappURL = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(
       whatsappMessage

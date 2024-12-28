@@ -72,7 +72,7 @@ const GardenShop = () => {
               </p>
             </div>
             <a
-              href={`https://wa.me/${7737002188}`}
+              href={`https://wa.me/${9680027791}`}
               target="_blank"
               className="bg-zinc-900 font-bitter text-white text-sm sm:text-base lg:text-lg px-10 sm:px-17 lg:px-20 py-5 sm:py-6 lg:py-5 rounded-full hover:bg-zinc-700 transition-all"
             >

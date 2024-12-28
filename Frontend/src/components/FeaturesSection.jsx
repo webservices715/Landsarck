@@ -73,7 +73,7 @@ const FeaturesSection = () => {
 
       <div className="flex justify-center mt-8">
         <a
-          href={`https://wa.me/${7737002188}`}
+          href={`https://wa.me/${9680027791}`}
           target="_blank"
           className="px-6 py-4 border border-black hover:bg-black transition-all ease-out duration-300 text-black hover:text-white font-bitter font-semibold rounded"
         >

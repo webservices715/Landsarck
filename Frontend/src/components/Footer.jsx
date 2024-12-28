@@ -45,7 +45,7 @@ function Footer() {
                 info@landsarck.com
               </a>
               <br />
-              (+91) 7737002188
+              (+91) 9680027791
             </p>
           </div>
         </div>
